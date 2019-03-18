@@ -160,7 +160,19 @@
 									<input type="text" name="adress" class="form-control" placeholder="genre" required="">
 								</div>
 								<div class="form-group">
-									<textarea name="Message" placeholder="Message......." required=""></textarea>
+									<input type="date" name="datenaiss" class="form-control" placeholder="Birth date" required="">
+								</div>
+								<div class="form-group">
+									<input type="text" name="nationality" class="form-control" placeholder="Nationality" required="">
+								</div>
+								<div class="form-group">
+									<input type="text" name="civilstate" class="form-control" placeholder="Civil state" required="">
+								</div>
+								<div class="form-group">
+									<input type="text" name="pseudo" class="form-control" placeholder="Pseudo" required="">
+								</div>
+								<div class="form-group">
+									<input type="password" name="pwd" class="form-control" placeholder="Password" required="">
 								</div>
 								<button type="submit" class="btn">Submit</button>
 							</form>
