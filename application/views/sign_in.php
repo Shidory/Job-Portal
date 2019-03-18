@@ -148,7 +148,16 @@
 									<input type="text" name="title" class="form-control" placeholder="Title" required="">
 								</div>
 								<div class="form-group">
+									<input type="text" name="adress" class="form-control" placeholder="Adress" required="">
+								</div>
+								<div class="form-group">
 									<input type="email" name="Email" class="form-control" placeholder="Email" required="">
+								</div>
+								<div class="form-group">
+									<input type="text" name="phone" class="form-control" placeholder="Phone number" required="">
+								</div>
+								<div class="form-group">
+									<input type="text" name="adress" class="form-control" placeholder="genre" required="">
 								</div>
 								<div class="form-group">
 									<textarea name="Message" placeholder="Message......." required=""></textarea>
