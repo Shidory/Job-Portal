@@ -33,5 +33,6 @@ class Welcome extends CI_Controller {
 		$phone = $this->input->post('phone');
 		$genre = $this->input->post('genre');
 		$date = $this->input->post('date');
+		$nationality = $this->input->post('nationality');
 	}
 }
