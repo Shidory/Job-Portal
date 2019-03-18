@@ -22,7 +22,7 @@ class Welcome extends CI_Controller {
 	{
 		$this->load->view('sign_in');
 	}
-
+#########################################################################
 	public function sign_in(){
 
 		$name = $this->input->post('name');
@@ -37,6 +37,6 @@ class Welcome extends CI_Controller {
 		$civilstate = $this->input->post('civilstate');
 		$image = $this->input->post('image');
 		$pseudo = $this->input->post('pseudo');
-		
+		$pwd =	$this->input->post('pwd');
 	}
 }
