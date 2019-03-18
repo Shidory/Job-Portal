@@ -54,12 +54,6 @@
 							<p>Sign in</p>
 						</a>
 					</li>
-					<li>
-						<a href="#about">
-							<span class="fa fa-question"></span>
-							<p>About</p>
-						</a>
-					</li>
 				</ul>
 			</nav>
 		</header>
