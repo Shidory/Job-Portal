@@ -34,5 +34,6 @@ class Welcome extends CI_Controller {
 		$genre = $this->input->post('genre');
 		$date = $this->input->post('date');
 		$nationality = $this->input->post('nationality');
+		$civilstate = $this->input->post('civilstate');
 	}
 }
