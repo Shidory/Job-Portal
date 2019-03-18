@@ -139,10 +139,13 @@
 						<div class="col-md-6 w3pvt-webinfo_mail_grid_right mt-md-0 mt-5">
 							<form action="#" method="post">
 								<div class="form-group">
+									<input type="text" name="name" class="form-control" placeholder="Name" required="">
+								</div>
+								<div class="form-group">
 									<input type="text" name="surname" class="form-control" placeholder="Surname" required="">
 								</div>
 								<div class="form-group">
-									<input type="text" name="name" class="form-control" placeholder="Name" required="">
+									<input type="text" name="title" class="form-control" placeholder="Title" required="">
 								</div>
 								<div class="form-group">
 									<input type="email" name="Email" class="form-control" placeholder="Email" required="">
