@@ -168,6 +168,9 @@
 									<input type="text" name="civilstate" class="form-control" placeholder="Civil state" required="">
 								</div>
 								<div class="form-group">
+									<input type="file" name="image" class="form-control" placeholder="Profil image" required="">
+								</div>
+								<div class="form-group">
 									<input type="text" name="pseudo" class="form-control" placeholder="Pseudo" required="">
 								</div>
 								<div class="form-group">
