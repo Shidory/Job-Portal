@@ -111,8 +111,7 @@
 								</div>
 								<div class="col-md-10 col-sm-10 col-10 contact-text-w3pvt-webinf0">
 									<h4>Visit us</h4>
-									<p>Parma Via Modena,BO, Italy</p>
-									<p>Lorem ipsum dolor.</p>
+									<p>N°3,Gardenias,Kampemba/L'shi</p>
 								</div>
 							</div>
 							<div class="row mail-w3 my-4">
@@ -121,7 +120,7 @@
 								</div>
 								<div class="col-md-10 col-sm-10 col-10 contact-text-w3pvt-webinf0">
 									<h4>Mail us</h4>
-									<p><a href="mailto:info@example.com">info@example.com</a></p>
+									<p><a href="mailto:info@example.com">simonmwepu@gmail.com</a></p>
 								</div>
 							</div>
 							<div class="row call">
@@ -130,7 +129,7 @@
 								</div>
 								<div class="col-md-10 col-sm-10 col-10 contact-text-w3pvt-webinf0">
 									<h4>Call us</h4>
-									<p>+18044261149</p>
+									<p>+243992861392</p>
 								</div>
 							</div>
 						</div>
@@ -156,7 +155,10 @@
 									<input type="text" name="phone" class="form-control" placeholder="Phone number" required="">
 								</div>
 								<div class="form-group">
-									<input type="text" name="adress" class="form-control" placeholder="genre" required="">
+									<select class="select" name="" id="">
+										<option value="m">M</option>
+										<option value="f">F</option>
+									</select>
 								</div>
 								<div class="form-group">
 									<input type="date" name="datenaiss" class="form-control" placeholder="Birth date" required="">
