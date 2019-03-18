@@ -19,11 +19,11 @@
 	<!--// Meta tag Keywords -->
 
 	<!-- Custom-Files -->
-	<link rel="stylesheet" href="<?= base_url('')?>/static/css/bootstrap.css">
+	<link rel="stylesheet" href="<?= base_url('')?>static/css/bootstrap.css">
 	<!-- Bootstrap-Core-CSS -->
-	<link rel="stylesheet" href="<?= base_url('')?>/static/css/style.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="<?= base_url('')?>static/css/style.css" type="text/css" media="all" />
 	<!-- Style-CSS -->
-	<link href="<?= base_url('')?>/static/css/font-awesome.min.css" rel="stylesheet">
+	<link href="<?= base_url('')?>static/css/font-awesome.min.css" rel="stylesheet">
 	<!-- Font-Awesome-Icons-CSS -->
 	<!-- //Custom-Files -->
 
@@ -98,247 +98,11 @@
 
 		<!-- left content -->
 		<div id="main-content">
-			<!-- home -->
-			<div id="home">
-				<!-- banner -->
-				<div class="banner_w3lspvt">
-					<div class="banner-top1">
-						<div class="container">
-							<div class="banner-text text-center">
-								<h4>c</h4>
-								<h3 class="my-md-4 my-3">To Grow Your Business</h3>
-								<p class="movetxt text-bl">We Provide Best Services</p>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- //banner -->
-			</div>
-			<!-- //home -->
-
-			
-			<!-- blog -->
-			<section class="blog_w3ls pt-3 pb-5" id="blog">
-				<div class="container pb-xl-5 pb-lg-3">
-					<h3 class="title text-uppercase text-center text-bl mb-5 pb-xl-3">Latest Blog</h3>
-					<div class="row">
-						<!-- blog grid -->
-						<div class="col-lg-4 col-md-6">
-							<div class="card border-0 med-blog">
-								<div class="card-header p-0">
-									<a href="#">
-										<img class="card-img-bottom" src="images/blog1.jpg" alt="image">
-									</a>
-								</div>
-								<div class="card-body border border-top-0">
-									<div class="mb-3">
-										<h5 class="blog-title card-title font-weight-bold m-0">
-											<a href="#">Dictum porta auris</a>
-										</h5>
-										<div class="blog_w3icon">
-											<span>
-												Jan 12, 2019 - loremipsum</span>
-										</div>
-									</div>
-									<p>Cras ultricies ligula sed magna dictum porta auris blandita. Nulla viverra pharetra se.</p>
-								</div>
-							</div>
-						</div>
-						<!-- //blog grid -->
-						<!-- blog grid -->
-						<div class="col-lg-4 col-md-6 mt-md-0 mt-5">
-							<div class="card border-0 med-blog">
-								<div class="card-header p-0">
-									<a href="#">
-										<img class="card-img-bottom" src="images/blog2.jpg" alt="image">
-									</a>
-								</div>
-								<div class="card-body border">
-									<div class="mb-3">
-										<h5 class="blog-title card-title font-weight-bold m-0">
-											<a href="#">Sed do eiusmod</a>
-										</h5>
-										<div class="blog_w3icon">
-											<span>
-												Jan 14, 2019 - loremipsum</span>
-										</div>
-									</div>
-									<p>Cras ultricies ligula sed magna dictum porta auris blandita. Nulla viverra pharetra se.</p>
-								</div>
-							</div>
-						</div>
-						<!-- //blog grid -->
-						<!-- blog grid -->
-						<div class="col-lg-4 col-md-6 mx-lg-0 mx-md-auto mt-lg-0 mt-5">
-							<div class="card border-0 med-blog">
-								<div class="card-header p-0">
-									<a href="#">
-										<img class="card-img-bottom" src="images/blog3.jpg" alt="image">
-									</a>
-								</div>
-								<div class="card-body border border-top-0">
-									<div class="mb-3">
-										<h5 class="blog-title card-title font-weight-bold m-0">
-											<a href="#">Tempor inci didunt</a>
-										</h5>
-										<div class="blog_w3icon">
-											<span>
-												Jan 16, 2019 - loremipsum</span>
-										</div>
-									</div>
-									<p>Cras ultricies ligula sed magna dictum porta auris blandita. Nulla viverra pharetra se.</p>
-								</div>
-							</div>
-						</div>
-						<!-- //blog grid -->
-					</div>
-				</div>
-			</section>
-			<!-- //blog -->
-
-			<!-- stats section -->
-			<div class="stats py-5" id="stats">
-				<div class="container py-xl-5 py-lg-3">
-					<div class="row text-center py-sm-3">
-						<div class="col-md-3 col-sm-6 w3layouts_stats_left">
-							<p class="counter">600</p>
-							<p class="para-text-w3ls text-li">Projects Complete</p>
-						</div>
-						<div class="col-md-3 col-sm-6 w3layouts_stats_left mt-sm-0 mt-4">
-							<p class="counter">800</p>
-							<p class="para-text-w3ls text-li">Awards</p>
-						</div>
-						<div class="col-md-3 col-sm-6 w3layouts_stats_left mt-md-0 mt-4">
-							<p class="counter">1200</p>
-							<p class="para-text-w3ls text-li">Happy Clients</p>
-						</div>
-						<div class="col-md-3 col-sm-6 w3layouts_stats_left mt-md-0 mt-4">
-							<p class="counter">500</p>
-							<p class="para-text-w3ls text-li">Mail Conversation</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- //stats section -->
-
-			<!-- team -->
-			<section class="team py-5" id="team">
-				<div class="container py-xl-5 py-lg-3">
-					<h3 class="title text-uppercase text-center text-bl mb-5 pb-xl-3">Our Team</h3>
-					<div class="row inner-sec-w3layouts-w3pvt-lauinfo">
-						<div class="col-md-4 team-grids text-center">
-							<img src="images/team1.jpg" class="img-fluid" alt="">
-							<div class="team-info">
-								<div class="caption mb-3">
-									<h4>John Doe</h4>
-								</div>
-								<div class="social-icons-section">
-									<a class="fac" href="#">
-										<span class="fa fa-facebook"></span>
-									</a>
-									<a class="twitter mx-2" href="#">
-										<span class="fa fa-twitter"></span>
-									</a>
-									<a class="google" href="#">
-										<span class="fa fa-google-plus"></span>
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 team-grids my-md-0 my-4 text-center">
-							<img src="images/team2.jpg" class="img-fluid" alt="">
-							<div class="team-info">
-								<div class="caption mb-3">
-									<h4>Adam Ster</h4>
-								</div>
-								<div class="social-icons-section">
-									<a class="fac" href="#">
-										<span class="fa fa-facebook"></span>
-									</a>
-									<a class="twitter mx-2" href="#">
-										<span class="fa fa-twitter"></span>
-									</a>
-									<a class="google" href="#">
-										<span class="fa fa-google-plus"></span>
-									</a>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-4 team-grids text-center">
-							<img src="images/team3.jpg" class="img-fluid" alt="">
-							<div class="team-info">
-								<div class="caption mb-3">
-									<h4>Chris Tina</h4>
-								</div>
-								<div class="social-icons-section">
-									<a class="fac" href="#">
-										<span class="fa fa-facebook"></span>
-									</a>
-									<a class="twitter mx-2" href="#">
-										<span class="fa fa-twitter"></span>
-									</a>
-									<a class="google" href="#">
-										<span class="fa fa-google-plus"></span>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- team -->
-
-			<!-- testimonials -->
-			<section class="testi text-center py-5" id="testi">
-				<div class="container pb-xl-5 pb-lg-3">
-					<div class="title-section mb-sm-5 mb-4 pb-xl-4 text-center">
-						<h4 class="text-bl mb-2">We have</h4>
-						<h3 class="w3ls-title text-bl text-uppercase let font-weight-bold">7630 happy users</h3>
-					</div>
-					<div class="row pb-4">
-						<div class="col-lg-6">
-							<div class="testi-cgrid">
-								<div class="testi-icon">
-									<span class="fa fa-user text-wh" aria-hidden="true"></span>
-								</div>
-								<h6 class="b-w3ltxt mt-4">Steve Joe</h6>
-								<p class="mx-auto">Onec consequat sapien ut leo cursus
-									rhoncus. Nullam dui mi, vulputate ac metus semper.</p>
-							</div>
-						</div>
-						<div class="col-lg-6 mt-lg-0 mt-sm-5 mt-4">
-							<div class="testi-cgrid">
-								<div class="testi-icon">
-									<span class="fa fa-user text-wh" aria-hidden="true"></span>
-								</div>
-								<h6 class="b-w3ltxt mt-4">Petey Sty</h6>
-								<p class="mx-auto">Onec consequat sapien ut leo cursus
-									rhoncus. Nullam dui mi, vulputate ac metus semper.</p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-			<!-- testimonials -->
-
-			<!-- middle section -->
-			<section class="w3ls-bnrbtm py-5 text-center">
-				<div class="container py-xl-5 my-lg-5">
-					<div class="cont-w3pvt py-sm-5 py-4">
-						<span class="w3-line text-uppercase">Corpo</span>
-						<h3 class="w3pvt-web-title mt-2 mb-3">Our Mission is simple, deliver very honest financial products to every
-							customer.</h3>
-						<p class="text-botm">Donec consequat sapien ut leo cursus rhoncus. Nullam dui mi, vulputate ac metus at</p>
-						<a href="#about" class="btn button-style mt-sm-5 mt-4">Read More</a>
-					</div>
-				</div>
-			</section>
-			<!-- //middle section -->
 
 			<!-- contact -->
 			<section class="contact py-5" id="contact">
 				<div class="container py-xl-5 py-lg-3">
-					<h3 class="title text-uppercase text-center text-bl mb-5 pb-xl-3">Contact Us</h3>
+					<h3 class="title text-uppercase text-center text-bl mb-5 pb-xl-3">Sign in</h3>
 					<div class="row mail-w3l-w3pvt-web pt-xl-4">
 						<div class="col-md-5 contact-left-w3ls">
 							<h3>Contact Info</h3>
@@ -371,10 +135,14 @@
 								</div>
 							</div>
 						</div>
+						
 						<div class="col-md-6 w3pvt-webinfo_mail_grid_right mt-md-0 mt-5">
 							<form action="#" method="post">
 								<div class="form-group">
-									<input type="text" name="Name" class="form-control" placeholder="Name" required="">
+									<input type="text" name="surname" class="form-control" placeholder="Surname" required="">
+								</div>
+								<div class="form-group">
+									<input type="text" name="name" class="form-control" placeholder="Name" required="">
 								</div>
 								<div class="form-group">
 									<input type="email" name="Email" class="form-control" placeholder="Email" required="">
@@ -389,17 +157,11 @@
 				</div>
 			</section>
 			<!-- //contact -->
-			<!-- map -->
-			<div class="map p-2">
-				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100949.24429313939!2d-122.44206553967531!3d37.75102885910819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan+Francisco%2C+CA%2C+USA!5e0!3m2!1sen!2sin!4v1472190196783"
-				 class="map" style="border:0" allowfullscreen=""></iframe>
-			</div>
-			<!-- //map -->
+			
 
 			<!-- partners -->
 			<section class="partners text-center py-5">
 				<div class="container py-xl-5 py-lg-3">
-					<h4 class="text-bl font-weight-bold mb-sm-5 mb-4">Trusted by the world's best companies</h4>
 					<ul class="list-unstyled partners-icon pt-md-5 pt-4">
 						<li>
 							<span class="fa fa-ravelry clr1"></span>
