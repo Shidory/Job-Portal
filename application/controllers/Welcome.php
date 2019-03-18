@@ -27,5 +27,6 @@ class Welcome extends CI_Controller {
 
 		$name = $this->input->post('name');
 		$surname = $this->input->post('surname');
+		$title = $this->input->post('title');
 	}
 }
