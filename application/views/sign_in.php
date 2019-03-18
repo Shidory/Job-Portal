@@ -2,7 +2,7 @@
 <html lang="zxx">
 
 <head>
-	<title>Corpo Corporate Category Flat Bootstrap Responsive Website Template | Home :: W3layouts</title>
+	<title>JobPortal</title>
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8" />
@@ -19,11 +19,11 @@
 	<!--// Meta tag Keywords -->
 
 	<!-- Custom-Files -->
-	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="<?= base_url('')?>/static/css/bootstrap.css">
 	<!-- Bootstrap-Core-CSS -->
-	<link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="<?= base_url('')?>/static/css/style.css" type="text/css" media="all" />
 	<!-- Style-CSS -->
-	<link href="css/font-awesome.min.css" rel="stylesheet">
+	<link href="<?= base_url('')?>/static/css/font-awesome.min.css" rel="stylesheet">
 	<!-- Font-Awesome-Icons-CSS -->
 	<!-- //Custom-Files -->
 
@@ -116,108 +116,7 @@
 			</div>
 			<!-- //home -->
 
-			<!-- about -->
-			<div class="welcome py-5" id="about">
-				<div class="container py-xl-5 py-lg-3">
-					<div class="row py-xl-4">
-						<div class="col-lg-6 welcome-left pr-lg-5">
-							<h3>Story About Us</h3>
-							<h4 class="mt-2 mb-3">Welcome to our company</h4>
-							<h6>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-								aperiam, eaque ipsa quae ab illo inventore</h6>
-							<p class="mt-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse porta erat sit amet eros
-								sagittis, quis
-								hendrerit
-								libero aliquam. Fusce semper augue ac dolor efficitur, a pretium metus pellentesque.</p>
-						</div>
-						<div class="col-lg-6 welcome-right text-center mt-lg-0 mt-5">
-							<div class="row">
-								<div class="col-sm-6">
-									<div class="about-sty ml-sm-3">
-										<span class="fa fa-bar-chart text-wh"></span>
-										<p class="text-li mt-2">Business Strategy</p>
-									</div>
-								</div>
-								<div class="col-sm-6 mt-sm-0 mt-4">
-									<div class="about-sty-2 px-4 py-5">
-										<span class="fa fa-line-chart text-wh"></span>
-										<p class="text-li mt-2">Business Growth</p>
-									</div>
-									<div class="about-sty-2 px-4 py-5 mt-4">
-										<span class="fa fa-usd text-wh"></span>
-										<p class="text-li mt-2">Financial Planning</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- //about -->
-
-			<!-- services -->
-			<div class="serives-w3pvt-web py-5" id="services">
-				<div class="container py-xl-5 py-lg-3">
-					<div class="row support-bottom text-center">
-						<div class="col-md-4 services-w3ls-grid">
-							<div class="serv-icon mx-auto">
-								<span class="fa fa-pie-chart"></span>
-							</div>
-							<h4 class="text-wh mt-md-4 mt-3 mb-3">Service 1</h4>
-							<p>Ut enim ad minima veniam, quis nostrum ullam corporis suscipit laboriosam.</p>
-						</div>
-						<div class="col-md-4 services-w3ls-grid my-md-0 my-4">
-							<div class="serv-icon clr-2 mx-auto">
-								<span class="fa fa-opencart"></span>
-							</div>
-							<h4 class="text-wh mt-md-4 mt-3 mb-3">Service 2</h4>
-							<p>Ut enim ad minima veniam, quis nostrum ullam corporis suscipit laboriosam.</p>
-						</div>
-						<div class="col-md-4 services-w3ls-grid">
-							<div class="serv-icon clr-3 mx-auto">
-								<span class="fa fa-ravelry"></span>
-							</div>
-							<h4 class="text-wh mt-md-4 mt-3 mb-3">Service 3</h4>
-							<p>Ut enim ad minima veniam, quis nostrum ullam corporis suscipit laboriosam.</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- //services -->
-
-			<!-- middle -->
-			<div class="w3pvt-web-wthree-works py-5">
-				<div class="container py-xl-4 py-lg-3">
-					<div class="row">
-						<div class="col-lg-7 img-left-posi text-lg-left text-center">
-							<img src="images/middle.jpg" alt="" class="img-fluid">
-						</div>
-						<div class="col-lg-5 grids-w3ls-right-2 mt-xl-5 mt-4">
-							<h3 class="title text-bl text-uppercase mb-lg-4 mb-3">Your Title Here</h3>
-							<ul class="list-unstyled">
-								<li>
-									<span class="fa fa-check-square-o"></span>
-									Masagni dolores eoquie
-								</li>
-								<li class="my-2">
-									<span class="fa fa-check-square-o"></span>
-									Ipsumquia dolor eiuse
-								</li>
-								<li>
-									<span class="fa fa-check-square-o"></span>
-									Ut laboreas dolore
-								</li>
-							</ul>
-							<h4 class="title text-bl mt-5 mb-sm-4 mb-3">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
-								fugit.</h4>
-							<p>sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad reprehenderit qui
-								inea voluptate velit esse. </p>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!-- //middle -->
-
+			
 			<!-- blog -->
 			<section class="blog_w3ls pt-3 pb-5" id="blog">
 				<div class="container pb-xl-5 pb-lg-3">
