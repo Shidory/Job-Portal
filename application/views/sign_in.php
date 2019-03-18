@@ -102,7 +102,6 @@
 			<!-- contact -->
 			<section class="contact py-5" id="contact">
 				<div class="container py-xl-5 py-lg-3">
-					<h3 class="title text-uppercase text-center text-bl mb-5 pb-xl-3">Sign in</h3>
 					<div class="row mail-w3l-w3pvt-web pt-xl-4">
 						<div class="col-md-5 contact-left-w3ls">
 							<h3>Contact Info</h3>
@@ -174,7 +173,7 @@
 								<div class="form-group">
 									<input type="password" name="pwd" class="form-control" placeholder="Password" required="">
 								</div>
-								<button type="submit" class="btn">Submit</button>
+								<button type="submit" class="btn">Sign in</button>
 							</form>
 						</div>
 					</div>
