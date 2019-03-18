@@ -26,5 +26,6 @@ class Welcome extends CI_Controller {
 	public function sign_in(){
 
 		$name = $this->input->post('name');
+		$surname = $this->input->post('surname');
 	}
 }
