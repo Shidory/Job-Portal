@@ -103,7 +103,7 @@
 									<input type="text" name="name" class="form-control" placeholder="Name" required="">
 								</div>
 								<div class="form-group">
-									<input type="text" name="surname" class="form-control" placeholder="Surname" >
+									<input type="text" name="surname" class="form-control" placeholder="Surname" required="">
 								</div>
 								<!--div class="form-group">
 									<input type="text" name="title" class="form-control" placeholder="Title" required="">
