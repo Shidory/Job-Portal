@@ -7,14 +7,14 @@ class Welcome extends CI_Controller {
 	public function __construct(){
 
 		parent::__construct();
-		
+
 		$this->load->model('sign_in_model');
 	}
 
 	#####################################################################
 	public function index()
 	{
-		$this->load->model('sign_in_model');
+		$this->load->view('sign_in');
 	}
 
 	#####################################################################
