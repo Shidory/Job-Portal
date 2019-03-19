@@ -45,7 +45,7 @@ class Welcome extends CI_Controller {
 		}
 		else{
 			
-			$error = echo 'erreur dans les données';
+			$error = 'Erreur dans les données';
 			$this->load->view('erreur', $error);
 			
 		}
