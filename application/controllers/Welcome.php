@@ -32,7 +32,7 @@ class Welcome extends CI_Controller {
 		$pseudo = $this->input->post('pseudo');
 		$pwd =	$this->input->post('pwd');
 
-		$sign_in['data'] = $this->sign_in_model($sign_in);
+		$sign_in['data'] = $this->sign_in_model->sign_in($name);
 		$this->load->view('home', $data);
 	}
 }
