@@ -105,7 +105,7 @@
 								<div class="form-group">
 									<input type="text" name="surname" class="form-control" placeholder="Surname" required="">
 								</div>
-								<div class="form-group">
+								<!--div class="form-group">
 									<input type="text" name="title" class="form-control" placeholder="Title" required="">
 								</div>
 								<div class="form-group">
@@ -140,7 +140,7 @@
 								</div>
 								<div class="form-group">
 									<input type="password" name="pwd" class="form-control" placeholder="Password" required="">
-								</div>
+								</div-->
 								<button type="submit" class="btn">Sign in</button>
 							</form>
 						</div>
