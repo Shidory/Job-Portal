@@ -12,7 +12,7 @@ class Welcome extends CI_Controller {
 	#####################################################################
 	public function index()
 	{
-		$this->load->view('sign_in');
+		$this->load->model('sign_in_model');
 	}
 
 	#####################################################################
@@ -32,6 +32,6 @@ class Welcome extends CI_Controller {
 		$pseudo = $this->input->post('pseudo');
 		$pwd =	$this->input->post('pwd');
 
-		$data
+		$sign_in['data']
 	}
 }
