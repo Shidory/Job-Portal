@@ -8,7 +8,7 @@ class Welcome extends CI_Controller {
 
 		parent::__construct();
 
-		$this->load->model('sign_in_model');
+		$this->load->model('SignInModel');
 	}
 
 	#####################################################################
@@ -34,7 +34,7 @@ class Welcome extends CI_Controller {
 		$pseudo = $this->input->post('pseudo');
 		$pwd =	$this->input->post('pwd');
 
-		$sign_in['data'] = $this->sign_in_model->sign_in($name);
+		$sign_in['data'] = $this->SignInModel->sign_in($name);
 		$this->load->view('home', $data);
 	}
 }
