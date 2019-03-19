@@ -35,7 +35,7 @@ $config['base_url'] = 'http://'.$_SERVER["SERVER_NAME"].':8088/jobportal';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
