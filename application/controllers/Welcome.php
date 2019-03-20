@@ -18,6 +18,11 @@ class Welcome extends CI_Controller {
 	}
 
 	#####################################################################
+	public function upload_image(){
+
+	}
+
+	#####################################################################
 	public function sign_in(){
 
 		$name = $this->input->post('name');
