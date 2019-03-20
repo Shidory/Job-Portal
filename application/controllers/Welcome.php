@@ -36,6 +36,9 @@ class Welcome extends CI_Controller {
 					return $tmppath;
 				}
 			}
+			else{
+				echo 'Format invalide, seul les formats: JPEG, PNG sont autorisés.';
+			}
 		}
 
 	}
