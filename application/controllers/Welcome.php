@@ -30,6 +30,11 @@ class Welcome extends CI_Controller {
 			if(in_array($type,array('jpg','jpeg','png','JPG','JPEG','PNG'))){
 
 				$tmppath="upload/account_profile/".$_POST['nom'].".".$type;
+				if(is_uploaded_file($_FILES["image"]["tmp_name"]))
+				{
+					move_uploaded_file($_FILES['image']['tmp_name'],$tmppath);
+					return $tmppath;
+				}
 			}
 		}
 
