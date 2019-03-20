@@ -28,7 +28,8 @@ class Welcome extends CI_Controller {
 			$type=$type[count($type)-1];
 			
 			if(in_array($type,array('jpg','jpeg','png','JPG','JPEG','PNG'))){
-				
+
+				$tmppath="upload/account_profile/".$_POST['nom'].".".$type;
 			}
 		}
 
