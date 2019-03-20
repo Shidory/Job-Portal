@@ -40,6 +40,9 @@ class Welcome extends CI_Controller {
 				echo 'Format invalide, seul les formats: JPEG, PNG sont autorisés.';
 			}
 		}
+		else{
+			echo 'Taille invalide, importez un fichier de taille inférieur à 100ko.';
+		}
 
 	}
 
