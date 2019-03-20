@@ -22,6 +22,7 @@ class Welcome extends CI_Controller {
 
 		if($_FILES['image']['size'] <= 102400){
 			$url = 'upload/account_profile';
+			$image=basename($_FILES['image']['name']);
 		}
 
 	}
