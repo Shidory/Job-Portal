@@ -63,7 +63,7 @@ class Welcome extends CI_Controller {
 		$pseudo = $this->input->post('pseudo');
 		$pwd =	$this->input->post('pwd');
 
-		if (isset($nom, $prenom, $titre, $adresse, $email,$telephone, $genre, $datenaiss, 
+		if (isset($nom, $prenom, $titre, $adresse, $email, $telephone, $genre, $datenaiss, 
 		$nationalite, $etat, $image, $pseudo, $pwd
 		)){
 
