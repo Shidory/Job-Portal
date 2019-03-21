@@ -263,7 +263,7 @@
       
                   <h2>Account</h2>
                     <?= isset($this->session->error_data) ? '<code>' .$this->session->error_data. '</code>' : ''; ?>
-                  <?= form_open('connecter','class="probootstrap-form"');?>
+                  <?= form_open("welcome/sign_in");?>
                     <div class="form-group">
                       <input type="text" class="form-control" placeholder="Nom" name="nom">
 					</div> 
