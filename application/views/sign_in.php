@@ -675,7 +675,7 @@
     <script src="<?= base_url() ?>assets/js/main.js"></script>
 
 
-    <script src="vendors/chart.js/dist/Chart.bundle.min.js"></script>
+    <script src="<?= base_url() ?>vendors/chart.js/dist/Chart.bundle.min.js"></script>
     <script src="assets/js/dashboard.js"></script>
     <script src="assets/js/widgets.js"></script>
     <script src="vendors/jqvmap/dist/jquery.vmap.min.js"></script>
