@@ -49,8 +49,8 @@ class Welcome extends CI_Controller {
 	#####################################################################
 	public function sign_in(){
 
-		$name = $this->input->post('name');
-		$surname = $this->input->post('surname');
+		$name = $this->input->post('nom');
+		$surname = $this->input->post('prenom');
 		var_dump($name,$surname);die();
 		// $title = $this->input->post('title');
 		// $adress = $this->input->post('adress');
