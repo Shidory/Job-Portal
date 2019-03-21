@@ -98,7 +98,7 @@
 						</div>
 						
 						<div class="col-md-6 w3pvt-webinfo_mail_grid_right mt-md-0 mt-5">
-							<form action="Welcome/sign_in" method="post">
+							<form action="<?=site_url()?>Welcome/sign_in" method="post">
 								<div class="form-group">
 									<input type="text" name="name" class="form-control" placeholder="Name" required="">
 								</div>
