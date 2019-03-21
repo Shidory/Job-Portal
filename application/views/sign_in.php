@@ -262,8 +262,8 @@
                 <div class="col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate" data-animate-effect="fadeIn">
       
                   <h2>Account</h2>
-                    <?= isset($this->session->error_data) ? '<code>' .$this->session->error_data. '</code>' : ''; ?>
-                  <?= form_open("welcome/sign_in");?>
+
+                  <?= form_open("index.php/welcome/sign_in");?>
                     <div class="form-group">
                       <input type="text" class="form-control" placeholder="Nom" name="nom">
 					</div> 
