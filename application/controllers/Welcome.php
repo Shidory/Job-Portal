@@ -51,28 +51,27 @@ class Welcome extends CI_Controller {
 
 		$name = $this->input->post('nom');
 		$surname = $this->input->post('prenom');
-		var_dump($name,$surname);die();
-		// $title = $this->input->post('title');
-		// $adress = $this->input->post('adress');
-		// $email = $this->input->post('email');
-		// $phone = $this->input->post('phone');
-		// $genre = $this->input->post('genre');
-		// $date = $this->input->post('date');
-		// $nationality = $this->input->post('nationality');
-		// $civilstate = $this->input->post('civilstate');
-		// $image = $this->input->post('image');
-		// $pseudo = $this->input->post('pseudo');
-		// $pwd =	$this->input->post('pwd');
+		$title = $this->input->post('titre');
+		$adress = $this->input->post('adresse');
+		$email = $this->input->post('email');
+		$phone = $this->input->post('telephone');
+		$genre = $this->input->post('genre');
+		$date = $this->input->post('datenaiss');
+		$nationality = $this->input->post('nationalite');
+		$civilstate = $this->input->post('etatcivil');
+		$image = $this->input->post('image');
+		$pseudo = $this->input->post('pseudo');
+		$pwd =	$this->input->post('pwd');
 
-		// if (isset($name, $surname, $title, $adress, $email,$phone, $genre, $date, 
-		// $nationality, $civilstate, $image, $pseudo, $pwd
-		// )){
+		if (isset($nom, $surname, $title, $adress, $email,$phone, $genre, $date, 
+		$nationality, $civilstate, $image, $pseudo, $pwd
+		)){
 
-		// 	$sign_in['data'] = $this->SignInModel->sign_in($name, $surname, $title, $adress, $email,
-		// 	$phone, $genre, $date, $nationality, $civilstate, $image, $pseudo, $pwd);
+			$sign_in['data'] = $this->SignInModel->sign_in($name, $surname, $title, $adress, $email,
+			$phone, $genre, $date, $nationality, $civilstate, $image, $pseudo, $pwd);
 			
-		// 	$this->load->view('home', $data);
-		// }
+			$this->load->view('home', $sign_in);
+		}
 		if (isset($name, $surname)){
 			$sign_in['data'] = $this->SignInModel->sign_in($name, $surname, $title, $adress, $email,
 		 	$phone, $genre, $date, $nationality, $civilstate, $image, $pseudo, $pwd);
