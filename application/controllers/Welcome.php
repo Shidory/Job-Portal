@@ -63,20 +63,14 @@ class Welcome extends CI_Controller {
 		$pseudo = $this->input->post('pseudo');
 		$pwd =	$this->input->post('pwd');
 
-		if (isset($nom, $surname, $title, $adress, $email,$phone, $genre, $date, 
-		$nationality, $civilstate, $image, $pseudo, $pwd
+		if (isset($nom, $prenom, $titre, $adresse, $email,$telephone, $genre, $datenaiss, 
+		$nationalite, $etat, $image, $pseudo, $pwd
 		)){
 
-			$sign_in['data'] = $this->SignInModel->sign_in($name, $surname, $title, $adress, $email,
-			$phone, $genre, $date, $nationality, $civilstate, $image, $pseudo, $pwd);
+			$sign_in['data'] = $this->SignInModel->sign_in($nom, $prenom, $titre, $adresse, $email,$telephone, $genre, $datenaiss, 
+			$nationalite, $etat, $image, $pseudo, $pwd);
 			
 			$this->load->view('home', $sign_in);
-		}
-		if (isset($name, $surname)){
-			$sign_in['data'] = $this->SignInModel->sign_in($name, $surname, $title, $adress, $email,
-		 	$phone, $genre, $date, $nationality, $civilstate, $image, $pseudo, $pwd);
-			
-		 	$this->load->view('home', $data);
 		}
 		else{
 			
