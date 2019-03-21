@@ -14,7 +14,7 @@ class Welcome extends CI_Controller {
 	#####################################################################
 	public function index()
 	{
-		$this->load->view('sign_in');
+		$this->load->view('index');
 	}
 
 	#####################################################################
