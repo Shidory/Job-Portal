@@ -63,13 +63,36 @@ class Welcome extends CI_Controller {
 		$pwd =	$this->input->post('pwd');
 		
 		if (isset($nom, $prenom, $titre, $adresse, $email, $telephone, $genre, $datenaiss, 
-		$nationalite, $image, $pseudo, $pwd
+		$nationalite, $pseudo, $pwd
 		)){
-			$img = $this->upload_image();
-			$sign_in['data'] = $this->SignInModel->sign_in($nom, $prenom, $titre, $adresse, $email, $telephone, $genre, $datenaiss, 
-			$nationalite, $img, $pseudo, $pwd);
-			
-			$this->load->view('home', $sign_in);
+			if($_FILES['image']['size'] <= 102400){
+				$url = 'upload/account_profile';
+				$image=basename($_FILES['image']['name']);
+				$image=str_replace(' ','|',$image);
+				$type=explode(".",$image);
+				$type=$type[count($type)-1];
+				
+				if(in_array($type,array('jpg','jpeg','png','JPG','JPEG','PNG'))){
+	
+					$tmppath="upload/account_profile/".$_POST['nom'].".".$type;
+					if(is_uploaded_file($_FILES["image"]["tmp_name"]))
+					{	
+						$sign_in['data'] = $this->SignInModel->sign_in($nom, $prenom, $titre, $adresse, $email, $telephone, $genre, $datenaiss, 
+						$nationalite, $img, $pseudo, $pwd);
+						
+						$this->load->view('home', $sign_in);
+
+						move_uploaded_file($_FILES['image']['tmp_name'],$tmppath);
+						return $tmppath;
+					}
+				}
+				else{
+					echo 'Format invalide, seul les formats: JPEG, PNG sont autorisés.';
+				}
+			}
+			else{
+				echo 'Taille invalide, importez un fichier de taille inférieur à 100ko.';
+			}
 		}
 		else{
 			
