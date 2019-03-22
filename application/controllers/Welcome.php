@@ -77,12 +77,12 @@ class Welcome extends CI_Controller {
 					$tmppath="upload/account_profile/".$_POST['nom'].".".$type;
 					if(is_uploaded_file($_FILES["image"]["tmp_name"]))
 					{	
-						$sign_in['data'] = $this->SignInModel->sign_in($nom, $prenom, $titre, $adresse, $email, $telephone, $genre, $datenaiss, 
-						$nationalite, $img, $pseudo, $pwd);
-						
-						$this->load->view('home', $sign_in);
 
 						move_uploaded_file($_FILES['image']['tmp_name'],$tmppath);
+						$sign_in['data'] = $this->SignInModel->sign_in($nom, $prenom, $titre, $adresse, $email, $telephone, $genre, $datenaiss, 
+						$nationalite, $tmppath, $pseudo, $pwd);
+						
+						$this->load->view('home', $sign_in);
 						return $tmppath;
 					}
 				}
