@@ -263,7 +263,7 @@
       
                   <h2>Account</h2>
 
-                  <?= form_open("index.php/welcome/sign_in");?>
+                  <?= form_open("welcome/do_upload");?>
                     <div class="form-group">
                       <input type="text" class="form-control" placeholder="Nom" name="nom">
 					</div> 
@@ -296,9 +296,6 @@
                     </div>
                     <div class="form-group">
                       <?php echo form_error('pwd', '<span class="margin"><code>', '</span></code>'); ?>
-					</div>
-					<div class="form-group">
-                      <input type="file" class="form-control" placeholder="Image" name="image">
 					</div>
 					<div class="form-group">
                       <input type="text" class="form-control" placeholder="Pseudo" name="pseudo">
