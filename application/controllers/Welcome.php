@@ -99,8 +99,14 @@ class Welcome extends CI_Controller {
 		}
 	}
 
+	#####################################################################
 	public function login(){
-		
+
+	}
+
+	#####################################################################
+	public function upload_profile(){
+
 	}
 }
 ?>
