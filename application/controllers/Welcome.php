@@ -18,32 +18,28 @@ class Welcome extends CI_Controller {
 	}
 
 	#####################################################################
-	public function upload_image(){
+	public function do_upload()
+	{
+			$config['upload_path']          = base_url("upload/profile");
+			$config['allowed_types']        = 'gif|jpg|png';
+			$config['max_size']             = 100;
+			$config['max_width']            = 1024;
+			$config['max_height']           = 768;
 
-		if($_FILES['image']['size'] <= 102400){
-			$url = 'upload/account_profile';
-			$image=basename($_FILES['image']['name']);
-			$image=str_replace(' ','|',$image);
-			$type=explode(".",$image);
-			$type=$type[count($type)-1];
-			
-			if(in_array($type,array('jpg','jpeg','png','JPG','JPEG','PNG'))){
+			$this->load->library('upload', $config);
 
-				$tmppath="upload/account_profile/".$_POST['nom'].".".$type;
-				if(is_uploaded_file($_FILES["image"]["tmp_name"]))
-				{
-					move_uploaded_file($_FILES['image']['tmp_name'],$tmppath);
-					return $tmppath;
-				}
+			if ( ! $this->upload->do_upload('image'))
+			{
+					$error = array('error' => $this->upload->display_errors());
+
+					$this->load->view('sign_in', $error);
 			}
-			else{
-				echo 'Format invalide, seul les formats: JPEG, PNG sont autorisés.';
+			else
+			{
+					$data = array('upload_data' => $this->upload->data());
+					
+					$this->load->view('upload_success', $data);
 			}
-		}
-		else{
-			echo 'Taille invalide, importez un fichier de taille inférieur à 100ko.';
-		}
-
 	}
 
 	#####################################################################
@@ -61,39 +57,40 @@ class Welcome extends CI_Controller {
 		$etatcivil = $this->input->post('etatcivil');
 		$pseudo = $this->input->post('pseudo');
 		$pwd =	$this->input->post('pwd');
-		
-		if (isset($nom, $prenom, $titre, $adresse, $email, $telephone, $genre, $datenaiss, 
-		$nationalite, $pseudo, $pwd
+		var_dump($_FILES['image']['name']);die();
+		if (isset($_FILES['image']
 		)){
-			if($_FILES['image']['size'] <= 102400){
-				$url = 'upload/account_profile';
-				$image=basename($_FILES['image']['name']);
-				$image=str_replace(' ','|',$image);
-				$type=explode(".",$image);
-				$type=$type[count($type)-1];
+		// 	if($_FILES['image']['size'] <= 102400){
+		// 		$url = 'upload/account_profile';
+		// 		$image=basename($_FILES['image']['name']);
+		// 		$image=str_replace(' ','|',$image);
+		// 		$type=explode(".",$image);
+		// 		$type=$type[count($type)-1];
 				
-				if(in_array($type,array('jpg','jpeg','png','JPG','JPEG','PNG'))){
+		// 		if(in_array($type,array('jpg','jpeg','png','JPG','JPEG','PNG'))){
 	
-					$tmppath="upload/account_profile/".$_POST['nom'].".".$type;
-					if(is_uploaded_file($_FILES["image"]["tmp_name"]))
-					{	
+		// 			$tmppath="upload/account_profile/".$_POST['nom'].".".$type;
+		// 			if(is_uploaded_file($_FILES["image"]["tmp_name"]))
+		// 			{	
 
-						move_uploaded_file($_FILES['image']['tmp_name'],$tmppath);
-						$sign_in['data'] = $this->SignInModel->sign_in($nom, $prenom, $titre, $adresse, $email, $telephone, $genre, $datenaiss, 
-						$nationalite, $tmppath, $pseudo, $pwd);
+		// 				move_uploaded_file($_FILES['image']['tmp_name'],$tmppath);
+		// 				$sign_in['data'] = $this->SignInModel->sign_in($nom, $prenom, $titre, $adresse, $email, $telephone, $genre, $datenaiss, 
+		// 				$nationalite, $tmppath, $pseudo, $pwd);
 						
-						$this->load->view('home', $sign_in);
-						return $tmppath;
-					}
-				}
-				else{
-					echo 'Format invalide, seul les formats: JPEG, PNG sont autorisés.';
-				}
-			}
-			else{
-				echo 'Taille invalide, importez un fichier de taille inférieur à 100ko.';
-			}
+		// 				$this->load->view('home', $sign_in);
+		// 				return $tmppath;
+		// 			}
+		// 		}
+		// 		else{
+		// 			echo 'Format invalide, seul les formats: JPEG, PNG sont autorisés.';
+		// 		}
+		// 	}
+		// 	else{
+		// 		echo 'Taille invalide, importez un fichier de taille inférieur à 100ko.';
+		// 	}
+		echo 'ce bon';
 		}
+			
 		else{
 			
 			$error['error'] = 'Erreur dans les données';
@@ -101,4 +98,9 @@ class Welcome extends CI_Controller {
 			
 		}
 	}
+
+	public function login(){
+		
+	}
 }
+?>
