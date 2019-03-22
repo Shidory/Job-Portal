@@ -6,7 +6,7 @@
 
             $request = "INSERT INTO demandeur VALUES($nom, $prenom, $titre, $adresse, $email, $telephone, $genre, $datenaiss, 
             $nationalite, $pseudo, $pwd)";
-            $prepare = array(
-                
-            )
+            $prepare = array();
+        }
+    }
 ?>
