@@ -8,5 +8,10 @@
             $nationalite, $pseudo, $pwd)";
             $prepare = array();
         }
+
+        #################################################################
+        public function login($email, $pwd){
+
+        }
     }
 ?>
