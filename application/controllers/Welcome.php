@@ -49,26 +49,26 @@ class Welcome extends CI_Controller {
 	#####################################################################
 	public function sign_in(){
 
-		$name = $this->input->post('nom');
-		$surname = $this->input->post('prenom');
-		$title = $this->input->post('titre');
-		$adress = $this->input->post('adresse');
+		$nom = $this->input->post('nom');
+		$prenom = $this->input->post('prenom');
+		$titre = $this->input->post('titre');
+		$adresse = $this->input->post('adresse');
 		$email = $this->input->post('email');
-		$phone = $this->input->post('telephone');
+		$telephone = $this->input->post('telephone');
 		$genre = $this->input->post('genre');
-		$date = $this->input->post('datenaiss');
-		$nationality = $this->input->post('nationalite');
-		$civilstate = $this->input->post('etatcivil');
+		$datenaiss = $this->input->post('datenaiss');
+		$nationalite = $this->input->post('nationalite');
+		$etatcivil = $this->input->post('etatcivil');
 		$image = $this->input->post('image');
 		$pseudo = $this->input->post('pseudo');
 		$pwd =	$this->input->post('pwd');
-
+		
 		if (isset($nom, $prenom, $titre, $adresse, $email, $telephone, $genre, $datenaiss, 
-		$nationalite, $etat, $image, $pseudo, $pwd
+		$nationalite, $image, $pseudo, $pwd
 		)){
 
 			$sign_in['data'] = $this->SignInModel->sign_in($nom, $prenom, $titre, $adresse, $email,$telephone, $genre, $datenaiss, 
-			$nationalite, $etat, $image, $pseudo, $pwd);
+			$nationalite, $etat, $this->upload_image(), $pseudo, $pwd);
 			
 			$this->load->view('home', $sign_in);
 		}
