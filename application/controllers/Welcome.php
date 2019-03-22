@@ -68,7 +68,7 @@ class Welcome extends CI_Controller {
 		)){
 
 			$sign_in['data'] = $this->SignInModel->sign_in($nom, $prenom, $titre, $adresse, $email,$telephone, $genre, $datenaiss, 
-			$nationalite, $etat, $this->upload_image(), $pseudo, $pwd);
+			$nationalite, $this->upload_image(), $pseudo, $pwd);
 			
 			$this->load->view('home', $sign_in);
 		}
