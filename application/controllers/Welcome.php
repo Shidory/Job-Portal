@@ -70,40 +70,16 @@ class Welcome extends CI_Controller {
 		$etatcivil = $this->input->post('etatcivil');
 		$pseudo = $this->input->post('pseudo');
 		$pwd =	$this->input->post('pwd');
-		var_dump($_FILES['image']['name']);die();
-		if (isset($_FILES['image']
+		
+		if (isset($nom, $prenom, $titre, $adresse, $email, $telephone, $genre, $datenaiss, 
+		$nationalite, $pseudo, $pwd
 		)){
-		// 	if($_FILES['image']['size'] <= 102400){
-		// 		$url = 'upload/account_profile';
-		// 		$image=basename($_FILES['image']['name']);
-		// 		$image=str_replace(' ','|',$image);
-		// 		$type=explode(".",$image);
-		// 		$type=$type[count($type)-1];
-				
-		// 		if(in_array($type,array('jpg','jpeg','png','JPG','JPEG','PNG'))){
 	
-		// 			$tmppath="upload/account_profile/".$_POST['nom'].".".$type;
-		// 			if(is_uploaded_file($_FILES["image"]["tmp_name"]))
-		// 			{	
-
-		// 				move_uploaded_file($_FILES['image']['tmp_name'],$tmppath);
-		// 				$sign_in['data'] = $this->SignInModel->sign_in($nom, $prenom, $titre, $adresse, $email, $telephone, $genre, $datenaiss, 
-		// 				$nationalite, $tmppath, $pseudo, $pwd);
+			$sign_in['data'] = $this->SignInModel->sign_in($nom, $prenom, $titre, $adresse, $email, $telephone, $genre, $datenaiss, 
+			$nationalite, $pseudo, $pwd);
 						
-		// 				$this->load->view('home', $sign_in);
-		// 				return $tmppath;
-		// 			}
-		// 		}
-		// 		else{
-		// 			echo 'Format invalide, seul les formats: JPEG, PNG sont autorisés.';
-		// 		}
-		// 	}
-		// 	else{
-		// 		echo 'Taille invalide, importez un fichier de taille inférieur à 100ko.';
-		// 	}
-		echo 'ce bon';
-		}
-			
+			$this->load->view('home', $sign_in);
+		}	
 		else{
 			
 			$error['error'] = 'Erreur dans les données';
