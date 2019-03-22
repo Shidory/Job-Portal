@@ -14,15 +14,16 @@ class Welcome extends CI_Controller {
 	#####################################################################
 	public function index()
 	{
-		$this->load->view('sign_in');
+		$this->V_sign_in();
 	}
 	#####################################################################
 	#							LOAD VIEWS								#
 	#####################################################################
 	public function V_sign_in(){
 
+		$this->load->view('sign_in');
 	}
-	
+
 	#####################################################################
 	public function do_upload()
 	{
