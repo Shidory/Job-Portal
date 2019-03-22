@@ -59,7 +59,6 @@ class Welcome extends CI_Controller {
 		$datenaiss = $this->input->post('datenaiss');
 		$nationalite = $this->input->post('nationalite');
 		$etatcivil = $this->input->post('etatcivil');
-		$image = $this->input->post('image');
 		$pseudo = $this->input->post('pseudo');
 		$pwd =	$this->input->post('pwd');
 		
