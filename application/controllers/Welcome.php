@@ -25,6 +25,12 @@ class Welcome extends CI_Controller {
 	}
 
 	#####################################################################
+	public function V_login(){
+
+		
+	}
+
+	#####################################################################
 	public function do_upload()
 	{
 			$config['upload_path']          = base_url("upload/profile");
