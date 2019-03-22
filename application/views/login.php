@@ -263,7 +263,7 @@
       
                   <h2>Connexion</h2>
                     <?= isset($this->session->error_data) ? '<code>' .$this->session->error_data. '</code>' : ''; ?>
-                  <?= form_open('connecter','class="probootstrap-form"');?>
+                  <?= form_open('welcome/login');?>
                     <div class="form-group">
                       <?php echo form_error('mail', '<span class="margin"><code>', '</span></code>'); ?>
                       <input type="text" class="form-control" placeholder="Nom ou mail" name="mail">
