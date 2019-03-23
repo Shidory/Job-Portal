@@ -1,162 +1,113 @@
-<!doctype html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js" lang="en">
-<!--<![endif]-->
+<!DOCTYPE HTML>
+<html lang="zxx">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>JobPortal</title>
-    <meta name="description" content="Sufee Admin - HTML5 Admin Template">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Latest Login Form Responsive Widget Template :: w3layouts</title>
+	<!-- Meta tag Keywords -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8" />
+	<meta name="keywords" content="Latest Login Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
+	<script>
+		addEventListener("load", function () {
+			setTimeout(hideURLbar, 0);
+		}, false);
 
-    <link rel="apple-touch-icon" href="apple-icon.png">
-    <link rel="shortcut icon" href="favicon.ico">
+		function hideURLbar() {
+			window.scrollTo(0, 1);
+		}
+	</script>
+	<!-- Meta tag Keywords -->
 
-    <link rel="stylesheet" href="vendors/bootstrap/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="vendors/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="vendors/themify-icons/css/themify-icons.css">
-    <link rel="stylesheet" href="vendors/flag-icon-css/css/flag-icon.min.css">
-    <link rel="stylesheet" href="vendors/selectFX/css/cs-skin-elastic.css">
-    <link rel="stylesheet" href="vendors/jqvmap/dist/jqvmap.min.css">
+	<!-- css files -->
+	<link rel="stylesheet" href="<?= base_url(); ?>assets/latest/css/style.css" type="text/css" media="all" />
+	<!-- Style-CSS -->
+	<link href="<?= base_url(); ?>assets/latest/css/font-awesome.min.css" rel="stylesheet">
+	<!-- Font-Awesome-Icons-CSS -->
+	<!-- //css files -->
 
-
-    <link rel="stylesheet" href="assets/css/style.css">
-
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800' rel='stylesheet' type='text/css'>
-    <style>
-        .form{position: 50%;}
-    </style>
+	<!-- web-fonts -->
+	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+	 rel="stylesheet">
+	<!-- //web-fonts -->
 </head>
 
 <body>
-
-    <!-- Right Panel -->
-
-    <div id="right-panel" class="right-panel">
-
-        <!-- Header-->
-        <header id="header" class="header">
-
-            <div class="header-menu">
-
-                <div class="col-sm-7">
-                    <div class="header-left">
-                        <div class="form-inline">
-                            
-                        </div>
-
-                        <div class="dropdown for-notification">
-                            <div class="dropdown-menu" aria-labelledby="notification">
-                            </div>
-                        </div>
-
-                   
+	<div class="main-bg">
+		<!-- title -->
+		<h1></h1>
+		<!-- //title -->
+		<!-- content -->
+		<div class="sub-main-w3">
+			<div class="bg-content-w3pvt">
+				<div class="top-content-style">
+					<img src="images/user.jpg" alt="" />
+				</div>
+				<?= form_open("welcome/do_upload");?>
+					<p class="legend">Sign in Here<span class="fa fa-hand-o-down"></span></p>
+					<div class="input">
+                        <input type="text" class="form-control" placeholder="Nom" name="nom">
+						<span class="fa fa-envelope"></span>
+					</div>
+					<div class="input">
+                        <input type="text" class="form-control" placeholder="Prenom" name="prenom">
+						<span class="fa fa-unlock"></span>
                     </div>
-                </div>
-            </div>
-
-        </header><!-- /header -->
-        <section class="probootstrap-section probootstrap-bg-white probootstrap-zindex-above-showcase">
-            <div class="container">
-              <div class="row">
-                <div class="sin_in col-md-6 col-md-offset-3 text-center section-heading probootstrap-animate" data-animate-effect="fadeIn">
-                
-                    <?= form_open("welcome/do_upload");?>
-                    <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Nom" name="nom">
-					</div> 
-					<div class="form-group">
-                      <input type="text" class="form-control" placeholder="Prenom" name="prenom">
-					</div>
-					<div class="form-group">
-                      <input type="text" class="form-control" placeholder="Titre" name="titre">
-					</div>
-					<div class="form-group">
-                      <input type="text" class="form-control" placeholder="Adresse" name="adresse">
-					</div>
-					<div class="form-group">
-                      <input type="text" class="form-control" placeholder="E-mail" name="email">
-					</div>
-					<div class="form-group">
-                      <input type="text" class="form-control" placeholder="Telephone" name="telephone">
-					</div>
-					<div class="form-group">
-                      <input type="text" class="form-control" placeholder="Genre" name="genre">
-					</div>
-					<div class="form-group">
-                      <input type="date" class="form-control" placeholder="Date de naissance" name="datenaiss">
-					</div>
-					<div class="form-group">
-                      <input type="text" class="form-control" placeholder="Nationalité" name="nationalite">
-					</div>
-					<div class="form-group">
-                      <input type="text" class="form-control" placeholder="Etat Civil" name="etatcivil">
+                    <div class="input">
+                        <input type="text" class="form-control" placeholder="Titre" name="titre">
+						<span class="fa fa-unlock"></span>
                     </div>
-                    <div class="form-group">
-                      <?php echo form_error('pwd', '<span class="margin"><code>', '</span></code>'); ?>
+                    <div class="input">
+                        <input type="text" class="form-control" placeholder="Adresse" name="adresse">
+						<span class="fa fa-unlock"></span>
+                    </div>
+                    <div class="input">
+                        <input type="text" class="form-control" placeholder="E-mail" name="email">
+						<span class="fa fa-envelope"></span>
+                    </div>
+                    <div class="input">
+                        <input type="text" class="form-control" placeholder="Telephone" name="telephone">
+						<span class="fa fa-unlock"></span>
+                    </div>
+                    <div class="input">
+                        <input type="text" class="form-control" placeholder="Genre" name="genre">
+						<span class="fa fa-unlock"></span>
+                    </div>
+                    <div class="input">
+                        <input type="date" class="form-control" placeholder="Date de naissance" name="datenaiss">
+						<span class="fa fa-unlock"></span>
+                    </div>
+                    <div class="input">
+                        <input type="text" class="form-control" placeholder="Nationalité" name="nationalite">
+						<span class="fa fa-unlock"></span>
+                    </div>
+                    <div class="input">
+                        <input type="text" class="form-control" placeholder="Etat Civil" name="etatcivil">
+						<span class="fa fa-unlock"></span>
+                    </div>
+                    <div class="input">
+                        <input type="text" class="form-control" placeholder="Pseudo" name="pseudo">
+						<span class="fa fa-unlock"></span>
+                    </div>
+                    <div class="input">
+                        <input type="password" class="form-control" placeholder="Mot de passe" name="pwd">
+						<span class="fa fa-unlock"></span>
 					</div>
-					<div class="form-group">
-                      <input type="text" class="form-control" placeholder="Pseudo" name="pseudo">
-					</div>
-					<div class="form-group">
-                      <input type="password" class="form-control" placeholder="Mot de passe" name="pwd">
-                    </div>
-                    <div class="form-group clearfix mb40">
-                      <label for="remember" class="probootstrap-remember"><input type="checkbox" id="remember"> Remember Me</label>
-                      <a href="#" class="probootstrap-forgot">Forgot Password?</a>
-                    </div>
-                    <div class="form-group text-left">
-                      <div class="row">
-                        <div class="col-md-6 col-md-offset-3">
-                          <input type="submit" class="btn btn-primary btn-block" value="Sign Up">
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div> <!-- .content -->
-    </div><!-- /#right-panel -->
-
-    <!-- Right Panel -->
-
-    <script src="vendors/jquery/dist/jquery.min.js"></script>
-    <script src="vendors/popper.js/dist/umd/popper.min.js"></script>
-    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="assets/js/main.js"></script>
-
-
-    <script src="vendors/chart.js/dist/Chart.bundle.min.js"></script>
-    <script src="assets/js/dashboard.js"></script>
-    <script src="assets/js/widgets.js"></script>
-    <script src="vendors/jqvmap/dist/jquery.vmap.min.js"></script>
-    <script src="vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
-    <script src="vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-    <script>
-        (function($) {
-            "use strict";
-
-            jQuery('#vmap').vectorMap({
-                map: 'world_en',
-                backgroundColor: null,
-                color: '#ffffff',
-                hoverOpacity: 0.7,
-                selectedColor: '#1de9b6',
-                enableZoom: true,
-                showTooltip: true,
-                values: sample_data,
-                scaleColors: ['#1de9b6', '#03a9f5'],
-                normalizeFunction: 'polynomial'
-            });
-        })(jQuery);
-    </script>
-
+					<button type="submit" class="btn submit">
+						<span class="fa fa-sign-in"></span>
+					</button>
+				</form>
+				<a href="welcome/V_login" class="bottom-text-w3ls">log in</a>
+			</div>
+		</div>
+		<!-- //content -->
+		<!-- copyright -->
+		<div class="copyright">
+			<h2>&copy; 2019 JobPortal. Design by Shidory.
+				<a href="http://BeGreat.com" target="_blank">BeGreat</a>
+			</h2>
+		</div>
+		<!-- //copyright -->
+	</div>
 </body>
 
 </html>
