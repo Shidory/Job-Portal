@@ -56,7 +56,7 @@
 						<span class="fa fa-sign-in"></span>
 					</button>
 				</form>
-				<a href="welcome/V_sign_in" class="bottom-text-w3ls">Sign in</a>
+				<a href="V_sign_in" class="bottom-text-w3ls">Sign in</a>
 			</div>
 		</div>
 		<!-- //content -->
