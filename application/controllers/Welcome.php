@@ -31,6 +31,12 @@ class Welcome extends CI_Controller {
 	}
 
 	#####################################################################
+	public function V_home(){
+
+		
+	}
+
+	#####################################################################
 	public function do_upload()
 	{
 			$config['upload_path']          = base_url("upload/profile");
