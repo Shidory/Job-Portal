@@ -156,5 +156,9 @@
         public setPseudo($pseudo){
             $this->pseudo = $pseudo;
         }
+
+        public setPwd($pwd){
+            $this->pwd = $pwd;
+        }
     }
 ?>
