@@ -46,5 +46,9 @@
         public function setIdEmplois($idEmplois){
             $this->idEmplois = $idEmplois;
         }
+
+        public function setFk_IdDemandeur(){
+            $this->fk_idDemandeur = $fk_idDemandeur;
+        }
     }
 ?>
