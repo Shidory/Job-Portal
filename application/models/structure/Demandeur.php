@@ -12,7 +12,11 @@
         private $dateNaissance;
         private $nationalite;
         private $etatCivil;
-        private $image;
+        private $imageProfile;
+        private $pseudo;
+        private $pwd;
+        private $etat;
+        
         public Demandeur(){
 
         }
