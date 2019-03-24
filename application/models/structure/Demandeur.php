@@ -152,5 +152,9 @@
         public setImageProfile($imageProfile){
             $this->imageProfile = $imageProfile;
         }
+
+        public setPseudo($pseudo){
+            $this->pseudo = $pseudo;
+        }
     }
 ?>
