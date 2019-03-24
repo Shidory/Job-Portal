@@ -47,16 +47,20 @@
             $this->idEmplois = $idEmplois;
         }
 
-        public function setFk_IdDemandeur(){
+        public function setFk_IdDemandeur($fk_idDemandeur){
             $this->fk_idDemandeur = $fk_idDemandeur;
         }
 
-        public function setNomEntreprise(){
+        public function setNomEntreprise($nomEntreprise){
             $this->nomEntreprise = $nomEntreprise;
         }
 
-        public function setPostEmplois(){
+        public function setPostEmplois($posteEmplois){
             $this->posteEmplois = $posteEmplois;
+        }
+
+        public function setDateDebutEmplois($dateDebutEmplois){
+            $this->dateDebutEmplois = $dateDebutEmplois;
         }
     }
 ?>
