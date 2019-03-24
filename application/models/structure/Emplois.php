@@ -42,5 +42,9 @@
         public function getDateFinEmplois(){
             return $this->dateFinEmplois;
         }
+
+        public function setIdEmplois($idEmplois){
+            $this->idEmplois = $idEmplois;
+        }
     }
 ?>
