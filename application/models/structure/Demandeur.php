@@ -51,7 +51,11 @@
         }
 
         public getTitre(){
-            return $this->Titre;
+            return $this->titre;
+        }
+
+        public getAdresseDemandeur(){
+            return $this->adresseDemandeur;
         }
     }
 ?>
