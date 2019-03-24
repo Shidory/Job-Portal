@@ -21,6 +21,21 @@
         $telephoneDemandeur, $genre, $dateNaissance, $nationalite, $etatCivil, $imageProfile, $pseudo,$pwd,
         $etat){
 
+            $this->id = $id;
+            $this->nomDemandeur = $nomDemandeur;
+            $this->prenomDemandeur = $prenomDemandeur;
+            $this->titre = $titre;
+            $this->adresseDemandeur = $adresseDemandeur;
+            $this->emailDemandeur = $emailDemandeur;
+            $this->telephoneDemandeur = $telephoneDemandeur;
+            $this->genre = $genre;
+            $this->dateNaissance = $dateNaissance;
+            $this->nationalite = $nationalite;
+            $this->etatCivil = $etatCivil;
+            $this->imageProfile = $imageProfile;
+            $this->pseudo = $pseudo;
+            $this->pwd = $pwd;
+            $this->etat = $etat;
         }
     }
 ?>
