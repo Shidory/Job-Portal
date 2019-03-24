@@ -32,5 +32,9 @@
         public function setNomCompetences($nomCompetences){
             $this->nomCompetences = $nomCompetences;
         }
+
+        public function setFk_IdDemandeur($fk_idDemandeur){
+            $this->fk_idDemandeur = $fk_idDemandeur;
+        }
     }
 ?>
