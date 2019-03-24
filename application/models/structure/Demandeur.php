@@ -71,8 +71,8 @@
             return $this->telephoneDemandeur;
         }
 
-        public getGenreDemandeur(){
-            return $this->genreDemandeur;
+        public getGenre(){
+            return $this->genre;
         }
 
         public getDateNaissance(){
@@ -127,6 +127,14 @@
 
         public setEmailDemandeur($emailDemandeur){
             $this->emailDemandeur = $emailDemandeur;
+        }
+
+        public setTelephoneDemandeur($telephoneDemandeur){
+            $this->telephoneDemandeur = $telephoneDemandeur;
+        }
+
+        public setGenre($genre){
+            $this->genre = $genre;
         }
     }
 ?>
