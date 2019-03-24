@@ -17,6 +17,9 @@
         private $pwd;
         private $etat;
 
+        #################################################################
+        #                       CONSTRUCTOR                             #
+        #################################################################
         public Demandeur($id, $nomDemandeur, $prenomDemandeur, $titre, $adresseDemandeur, $emailDemandeur, 
         $telephoneDemandeur, $genre, $dateNaissance, $nationalite, $etatCivil, $imageProfile, $pseudo,$pwd,
         $etat){
@@ -37,7 +40,9 @@
             $this->pwd = $pwd;
             $this->etat = $etat;
         }
-
+        #################################################################
+        #                   GETTERS                                     #
+        #################################################################
         public getId(){
             return $this->id;
         }
@@ -96,6 +101,12 @@
 
         public getEtat(){
             return $this->etat;
+        }
+        #################################################################
+        #                           SETTERS                             #
+        #################################################################
+        public setId($id){
+            $this->id = $id;
         }
     }
 ?>
