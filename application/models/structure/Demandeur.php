@@ -37,5 +37,17 @@
             $this->pwd = $pwd;
             $this->etat = $etat;
         }
+
+        public getId(){
+            return $this->id;
+        }
+
+        /*public nomDemandeur(){
+            return $this->nomDemandeur;
+        }
+
+        public nomDemandeur(){
+            return $this->nomDemandeur;
+        }*/
     }
 ?>
