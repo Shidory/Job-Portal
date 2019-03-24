@@ -116,5 +116,9 @@
         public setPrenomDemandeur($prenomDemandeur){
             $this->prenomDemandeur = $prenomDemandeur;
         }
+
+        public setTitre($titre){
+            $this->titre = $titre;
+        }
     }
 ?>
