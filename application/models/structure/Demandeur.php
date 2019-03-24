@@ -160,5 +160,9 @@
         public setPwd($pwd){
             $this->pwd = $pwd;
         }
+
+        public setEtat($etat){
+            $this->etat = $etat;
+        }
     }
 ?>
