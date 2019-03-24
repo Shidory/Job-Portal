@@ -108,5 +108,9 @@
         public setId($id){
             $this->id = $id;
         }
+
+        public setNomDemandeur($nomDemandeur){
+            $this->nomDemandeur = $nomDemandeur;
+        }
     }
 ?>
