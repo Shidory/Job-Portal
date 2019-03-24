@@ -120,5 +120,9 @@
         public setTitre($titre){
             $this->titre = $titre;
         }
+
+        public setAdresseDemandeur($adresseDemandeur){
+            $this->adresseDemandeur = $adresseDemandeur;
+        }
     }
 ?>
