@@ -20,5 +20,9 @@
         public function getNomCompetences(){
             return $this->nomCompetences;
         }
+
+        public function getFk_IdDemandeur(){
+            return $this->fk_idDemandeur;
+        }f
     }
 ?>
