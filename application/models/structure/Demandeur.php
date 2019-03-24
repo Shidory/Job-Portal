@@ -42,12 +42,12 @@
             return $this->id;
         }
 
-        public nomDemandeur(){
+        public getNomDemandeur(){
             return $this->nomDemandeur;
         }
 
-        /*public nomDemandeur(){
-            return $this->nomDemandeur;
-        }*/
+        public getPrenomDemandeur(){
+            return $this->prenomDemandeur;
+        }
     }
 ?>
