@@ -9,7 +9,7 @@
         private $dateDebutEmplois;
         private $dateFinEmplois;
 
-        public Emplois(){
+        public Emplois($idEmplois,$fk_idDemandeur, $nomEntreprise, $posteEmplois, $dateDebutEmplois, $dateFinEmplois){
 
         }
     }
