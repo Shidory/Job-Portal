@@ -136,5 +136,9 @@
         public setGenre($genre){
             $this->genre = $genre;
         }
+
+        public setDateNaissance($dateNaissance){
+            $this->dateNaissance = $dateNaissance;
+        }
     }
 ?>
