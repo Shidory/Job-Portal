@@ -54,5 +54,9 @@
         public function setNomEntreprise(){
             $this->nomEntreprise = $nomEntreprise;
         }
+
+        public function setPostEmplois(){
+            $this->posteEmplois = $posteEmplois;
+        }
     }
 ?>
