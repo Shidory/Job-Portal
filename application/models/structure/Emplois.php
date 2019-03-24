@@ -34,5 +34,9 @@
         public function getPostEmplois(){
             return $this->postEmplois;
         }
+
+        public function getDateDebutEmplois(){
+            return $this->dateDebutEmplois;
+        }
     }
 ?>
