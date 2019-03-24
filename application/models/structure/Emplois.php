@@ -38,5 +38,9 @@
         public function getDateDebutEmplois(){
             return $this->dateDebutEmplois;
         }
+
+        public function getDateFinEmplois(){
+            return $this->dateFinEmplois;
+        }
     }
 ?>
