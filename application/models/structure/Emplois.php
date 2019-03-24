@@ -26,5 +26,9 @@
         public function getFk_IdDemandeur(){
             return $this->fk_idDemandeur;
         }
+
+        public function getNomEntreprise(){
+            return $this->nomEntreprise;
+        }
     }
 ?>
