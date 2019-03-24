@@ -62,5 +62,9 @@
         public function setDateDebutEmplois($dateDebutEmplois){
             $this->dateDebutEmplois = $dateDebutEmplois;
         }
+
+        public function setDateFinEmplois($dateFinEmplois){
+            $this->dateFinEmplois = $dateFinEmplois;
+        }
     }
 ?>
