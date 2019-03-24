@@ -43,125 +43,125 @@
         #################################################################
         #                   GETTERS                                     #
         #################################################################
-        public getId(){
+        public function getId(){
             return $this->id;
         }
 
-        public getNomDemandeur(){
+        public function getNomDemandeur(){
             return $this->nomDemandeur;
         }
 
-        public getPrenomDemandeur(){
+        public function getPrenomDemandeur(){
             return $this->prenomDemandeur;
         }
 
-        public getTitre(){
+        public function getTitre(){
             return $this->titre;
         }
 
-        public getAdresseDemandeur(){
+        public function getAdresseDemandeur(){
             return $this->adresseDemandeur;
         }
 
-        public getEmailDemandeur(){
+        public function getEmailDemandeur(){
             return $this->emailnomDemandeur;
         }
 
-        public getTelephoneDemandeur(){
+        public function getTelephoneDemandeur(){
             return $this->telephoneDemandeur;
         }
 
-        public getGenre(){
+        public function getGenre(){
             return $this->genre;
         }
 
-        public getDateNaissance(){
+        public function getDateNaissance(){
             return $this->dateNaissance;
         }
 
-        public getNationalite(){
+        public function getNationalite(){
             return $this->nationalite;
         }
 
-        public getEtatCivil(){
+        public function getEtatCivil(){
             return $this->etatCivil;
         }
 
-        public getImageProfile(){
+        public function getImageProfile(){
             return $this->imageProfile;
         }
 
-        public getPseudo(){
+        public function getPseudo(){
             return $this->pseudo;
         }
 
-        public getPwd(){
+        public function getPwd(){
             return $this->pwd;
         }
 
-        public getEtat(){
+        public function getEtat(){
             return $this->etat;
         }
         #################################################################
         #                           SETTERS                             #
         #################################################################
-        public setId($id){
+        public function setId($id){
             $this->id = $id;
         }
 
-        public setNomDemandeur($nomDemandeur){
+        public function setNomDemandeur($nomDemandeur){
             $this->nomDemandeur = $nomDemandeur;
         }
 
-        public setPrenomDemandeur($prenomDemandeur){
+        public function setPrenomDemandeur($prenomDemandeur){
             $this->prenomDemandeur = $prenomDemandeur;
         }
 
-        public setTitre($titre){
+        public function setTitre($titre){
             $this->titre = $titre;
         }
 
-        public setAdresseDemandeur($adresseDemandeur){
+        public function setAdresseDemandeur($adresseDemandeur){
             $this->adresseDemandeur = $adresseDemandeur;
         }
 
-        public setEmailDemandeur($emailDemandeur){
+        public function setEmailDemandeur($emailDemandeur){
             $this->emailDemandeur = $emailDemandeur;
         }
 
-        public setTelephoneDemandeur($telephoneDemandeur){
+        public function setTelephoneDemandeur($telephoneDemandeur){
             $this->telephoneDemandeur = $telephoneDemandeur;
         }
 
-        public setGenre($genre){
+        public function setGenre($genre){
             $this->genre = $genre;
         }
 
-        public setDateNaissance($dateNaissance){
+        public function setDateNaissance($dateNaissance){
             $this->dateNaissance = $dateNaissance;
         }
 
-        public setNationalite($nationalite){
+        public function setNationalite($nationalite){
             $this->nationalite = $nationalite;
         }
 
-        public setEtat($etatCivil){
+        public function setEtat($etatCivil){
             $this->etatCivil = $etatCivil;
         }
 
-        public setImageProfile($imageProfile){
+        public function setImageProfile($imageProfile){
             $this->imageProfile = $imageProfile;
         }
 
-        public setPseudo($pseudo){
+        public function setPseudo($pseudo){
             $this->pseudo = $pseudo;
         }
 
-        public setPwd($pwd){
+        public function setPwd($pwd){
             $this->pwd = $pwd;
         }
 
-        public setEtat($etat){
+        public function setEtat($etat){
             $this->etat = $etat;
         }
     }
