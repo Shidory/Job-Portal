@@ -49,5 +49,9 @@
         public getPrenomDemandeur(){
             return $this->prenomDemandeur;
         }
+
+        public getTitre(){
+            return $this->Titre;
+        }
     }
 ?>
