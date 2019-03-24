@@ -28,5 +28,9 @@
         public function setIdCompetences($idCompetences){
             $this->idCompetences = $idCompetences;
         }
+
+        public function setNomCompetences($nomCompetences){
+            $this->nomCompetences = $nomCompetences;
+        }
     }
 ?>
