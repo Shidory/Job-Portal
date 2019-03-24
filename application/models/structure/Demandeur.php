@@ -148,5 +148,9 @@
         public setEtat($etatCivil){
             $this->etatCivil = $etatCivil;
         }
+
+        public setImageProfile($imageProfile){
+            $this->imageProfile = $imageProfile;
+        }
     }
 ?>
