@@ -124,5 +124,9 @@
         public setAdresseDemandeur($adresseDemandeur){
             $this->adresseDemandeur = $adresseDemandeur;
         }
+
+        public setEmailDemandeur($emailDemandeur){
+            $this->emailDemandeur = $emailDemandeur;
+        }
     }
 ?>
