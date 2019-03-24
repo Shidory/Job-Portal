@@ -50,5 +50,9 @@
         public function setFk_IdDemandeur(){
             $this->fk_idDemandeur = $fk_idDemandeur;
         }
+
+        public function setNomEntreprise(){
+            $this->nomEntreprise = $nomEntreprise;
+        }
     }
 ?>
