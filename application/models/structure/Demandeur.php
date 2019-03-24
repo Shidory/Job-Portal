@@ -140,5 +140,9 @@
         public setDateNaissance($dateNaissance){
             $this->dateNaissance = $dateNaissance;
         }
+
+        public setNationalite($nationalite){
+            $this->nationalite = $nationalite;
+        }
     }
 ?>
