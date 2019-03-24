@@ -17,6 +17,8 @@
             return $this->idCompetences;
         }
 
-        
+        public function getNomCompetences(){
+            return $this->nomCompetences;
+        }
     }
 ?>
