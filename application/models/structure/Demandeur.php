@@ -16,18 +16,11 @@
         private $pseudo;
         private $pwd;
         private $etat;
-        
-        public Demandeur(){
 
-        }
+        public Demandeur($id, $nomDemandeur, $prenomDemandeur, $titre, $adresseDemandeur, $emailDemandeur, 
+        $telephoneDemandeur, $genre, $dateNaissance, $nationalite, $etatCivil, $imageProfile, $pseudo,$pwd,
+        $etat){
 
-        public function getAttribut($attribut){
-            switch($attribut){
-                case "id":
-                    return $this->id;
-                    break;
-                
-            }
         }
     }
 ?>
