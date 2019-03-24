@@ -57,5 +57,45 @@
         public getAdresseDemandeur(){
             return $this->adresseDemandeur;
         }
+
+        public getEmailDemandeur(){
+            return $this->emailnomDemandeur;
+        }
+
+        public getTelephoneDemandeur(){
+            return $this->telephoneDemandeur;
+        }
+
+        public getGenreDemandeur(){
+            return $this->genreDemandeur;
+        }
+
+        public getDateNaissance(){
+            return $this->dateNaissance;
+        }
+
+        public getNationalite(){
+            return $this->nationalite;
+        }
+
+        public getEtatCivil(){
+            return $this->etatCivil;
+        }
+
+        public getImageProfile(){
+            return $this->imageProfile;
+        }
+
+        public getPseudo(){
+            return $this->pseudo;
+        }
+
+        public getPwd(){
+            return $this->pwd;
+        }
+
+        public getEtat(){
+            return $this->etat;
+        }
     }
 ?>
