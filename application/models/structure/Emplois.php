@@ -8,5 +8,9 @@
         private posteEmplois;
         private dateDebutEmplois;
         private dateFinEmplois;
+
+        public Emplois(){
+            
+        }
     }
 ?>
