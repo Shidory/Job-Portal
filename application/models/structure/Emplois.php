@@ -22,5 +22,9 @@
         public function getIdEmplois(){
             return $this->idEmplois;
         }
+
+        public function getFk_IdDemandeur(){
+            return $this->fk_idDemandeur;
+        }
     }
 ?>
