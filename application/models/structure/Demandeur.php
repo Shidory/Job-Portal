@@ -144,5 +144,9 @@
         public setNationalite($nationalite){
             $this->nationalite = $nationalite;
         }
+
+        public setEtat($etatCivil){
+            $this->etatCivil = $etatCivil;
+        }
     }
 ?>
