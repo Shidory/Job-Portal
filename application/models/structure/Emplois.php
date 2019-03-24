@@ -30,5 +30,9 @@
         public function getNomEntreprise(){
             return $this->nomEntreprise;
         }
+
+        public function getPostEmplois(){
+            return $this->postEmplois;
+        }
     }
 ?>
