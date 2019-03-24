@@ -23,6 +23,10 @@
 
         public function getFk_IdDemandeur(){
             return $this->fk_idDemandeur;
-        }f
+        }
+
+        public function setIdCompetences($idCompetences){
+            $this->idCompetences = $idCompetences;
+        }
     }
 ?>
