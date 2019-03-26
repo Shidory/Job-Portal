@@ -84,10 +84,8 @@ class Welcome extends CI_Controller {
 			
 			$demandeur = new Demandeur($nom, $prenom, $titre, $adresse, $email, $telephone, $genre, $datenaiss, 
 			$nationalite, $pseudo, $pwd);
-			
-			$demandeurDAO = new DemandeurDAO();
 
-			
+			$dem = $this->demandeurDAO->sign_in($demandeur);
 			// $sign_in['data'] = $this->SignInModel->sign_in($nom, $prenom, $titre, $adresse, $email, $telephone, $genre, $datenaiss, 
 			// $nationalite, $pseudo, $pwd);
 						
