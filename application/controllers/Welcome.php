@@ -8,7 +8,7 @@ class Welcome extends CI_Controller {
 
 		parent::__construct();
 
-		$this->load->model('SignInModel');
+		$this->load->model('dao/DemandeurDao');
 		
 	}
 
