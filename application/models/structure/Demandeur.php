@@ -145,7 +145,7 @@
             $this->nationalite = $nationalite;
         }
 
-        public function setEtat($etatCivil){
+        public function setEtatCivil($etatCivil){
             $this->etatCivil = $etatCivil;
         }
 
