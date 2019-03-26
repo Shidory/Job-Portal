@@ -4,11 +4,12 @@
 
         public function sign_in($demandeur){
 
-            $request = "INSERT INTO demandeur VALUES(O, :nomDemandeur, :prenomDemandeur, :titre, :adresseDemandeur, :emailDemandeur,
-            telephoneDemandeur, :genre, :dateNaissance, :nationalite, :etatCivil, :imageProfile, :pseudo, :pwd,
-            etat )";
+            // $request = "INSERT INTO demandeur VALUES(O, :nomDemandeur, :prenomDemandeur, :titre, :adresseDemandeur, :emailDemandeur,
+            // telephoneDemandeur, :genre, :dateNaissance, :nationalite, :etatCivil, :imageProfile, :pseudo, :pwd,
+            // etat )";
 
             $ins = $this->db->insert(array(
+                
                 'nomDemandeur' => $demandeur->getNomDemandeur(),
                 'prenomDemandeur'=> $demandeur->getPrenomDemandeur(),
                 'titre'=> $demandeur->getTitre(),
