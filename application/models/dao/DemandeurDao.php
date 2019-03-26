@@ -24,7 +24,7 @@
                 'pwd'=> $demandeur->getPwd()
             ));
 
-
+            $this->db->insert($ins);
         }
     }
 ?>
