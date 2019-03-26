@@ -79,17 +79,13 @@ class Welcome extends CI_Controller {
 		$pwd =	$this->input->post('pwd');
 		
 		if (isset($nom, $prenom, $titre, $adresse, $email, $telephone, $genre, $datenaiss, 
-		$nationalite, $pseudo, $pwd
+		$nationalite, $etatcivil, $pseudo, $pwd
 		)){
 			
-			$demandeur = new Demandeur($nom, $prenom, $titre, $adresse, $email, $telephone, $genre, $datenaiss, 
-			$nationalite, $pseudo, $pwd);
+			$demandeur = new Demandeur(null, $nom, $prenom, $titre, $adresse, $email, $telephone, $genre, $datenaiss, 
+			$nationalite, $etatcivil, null, $pseudo, $pwd);
 
-			$dem = $this->demandeurDAO->sign_in($demandeur);
-			// $sign_in['data'] = $this->SignInModel->sign_in($nom, $prenom, $titre, $adresse, $email, $telephone, $genre, $datenaiss, 
-			// $nationalite, $pseudo, $pwd);
-						
-			// $this->load->view('home', $sign_in);
+			$this->demandeurDAO->sign_in($demandeur);
 		}	
 		else{
 			
