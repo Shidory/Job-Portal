@@ -42,7 +42,7 @@
 				<div class="top-content-style">
 					<img src="images/user.jpg" alt="" />
 				</div>
-				<?= form_open("welcome/do_upload");?>
+				<?= form_open("welcome/sign_in");?>
 					<p class="legend">Sign in Here<span class="fa fa-hand-o-down"></span></p>
 					<div class="input">
                         <input type="text" class="form-control" placeholder="Nom" name="nom">
