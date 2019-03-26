@@ -8,8 +8,7 @@
             telephoneDemandeur, :genre, :dateNaissance, :nationalite, :etatCivil, :imageProfile, :pseudo, :pwd,
             etat )";
 
-            $prepare = $this->db->prepare($request);
-            $ins = array(
+            $ins = $this->db->insert(array(
                 'nomDemandeur' => $demandeur->getNomDemandeur(),
                 'prenomDemandeur'=> $demandeur->getPrenomDemandeur(),
                 'titre'=> $demandeur->getTitre(),
@@ -23,7 +22,9 @@
                 'imageProfile'=> $demandeur->getImageProfile(),
                 'pseudo'=> $demandeur->getPseudo(),
                 'pwd'=> $demandeur->getPwd()
-            );
+            ));
+
+
         }
     }
 ?>
