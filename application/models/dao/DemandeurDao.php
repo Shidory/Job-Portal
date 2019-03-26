@@ -1,6 +1,6 @@
 <?php 
 
-    class DemandeDAO extends CI_Model{
+    class DemandeurDAO extends CI_Model{
 
         public function sign_in($demandeur){
 
