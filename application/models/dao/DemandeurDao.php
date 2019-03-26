@@ -11,6 +11,7 @@
             $prepare = $this->db->prepare($request);
             $ins = array(
                 'nomDemandeur' => $demandeur->getNomDemandeur(),
+                'prenomDemandeur'=> $demandeur->getPrenomDemandeur(),
             );
         }
     }
