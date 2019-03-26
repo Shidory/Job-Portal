@@ -9,6 +9,7 @@ class Welcome extends CI_Controller {
 		parent::__construct();
 
 		$this->load->model('dao/DemandeurDao');
+		$this->load->model('structure/Demandeur');
 		
 	}
 
@@ -84,7 +85,7 @@ class Welcome extends CI_Controller {
 			
 			$demandeur = new Demandeur(null, $nom, $prenom, $titre, $adresse, $email, $telephone, $genre, $datenaiss, 
 			$nationalite, $etatcivil, null, $pseudo, $pwd);
-
+			var_dump($demandeur->getNom());die();
 			$this->demandeurDAO->sign_in($demandeur);
 		}	
 		else{
