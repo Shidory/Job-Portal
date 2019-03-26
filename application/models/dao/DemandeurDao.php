@@ -12,6 +12,17 @@
             $ins = array(
                 'nomDemandeur' => $demandeur->getNomDemandeur(),
                 'prenomDemandeur'=> $demandeur->getPrenomDemandeur(),
+                'titre'=> $demandeur->getTitre(),
+                'adresseDemandeur'=> $demandeur->getAdresseDemandeur(),
+                'emailDemandeur'=> $demandeur->getEmailDemandeur(),
+                'telephoneDemandeur'=> $demandeur->getTelephoneDemandeur(),
+                'genre'=> $demandeur->getGenre(),
+                'dateNaissance'=> $demandeur->getDateNaissance(),
+                'nationalite'=> $demandeur->getNationalite(),
+                'etatCivil'=> $demandeur->getEtatCivl(),
+                'imageProfile'=> $demandeur->getImageProfile(),
+                'pseudo'=> $demandeur->getPseudo(),
+                'pwd'=> $demandeur->getPwd()
             );
         }
     }
