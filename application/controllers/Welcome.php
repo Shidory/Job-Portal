@@ -1,4 +1,5 @@
 <?php
+
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Welcome extends CI_Controller {
@@ -8,8 +9,7 @@ class Welcome extends CI_Controller {
 
 		parent::__construct();
 
-		$this->load->model('dao/DemandeurDao');
-		$this->load->model('structure/Demandeur');
+		$this->load->model('DemandeurDao');
 		
 	}
 
@@ -82,11 +82,27 @@ class Welcome extends CI_Controller {
 		if (isset($nom, $prenom, $titre, $adresse, $email, $telephone, $genre, $datenaiss, 
 		$nationalite, $etatcivil, $pseudo, $pwd
 		)){
-			
-			$demandeur = new Demandeur(null, $nom, $prenom, $titre, $adresse, $email, $telephone, $genre, $datenaiss, 
-			$nationalite, $etatcivil, null, $pseudo, $pwd);
-			var_dump($demandeur->getNom());die();
-			$this->demandeurDAO->sign_in($demandeur);
+
+			$data = array(
+				
+				'nomDemandeur'=>$nom,
+				'prenomDemandeur'=>$prenom,
+				'titre'=>$titre,
+				'prenomDemandeur'=>$prenom,
+				'adresseDemandeur'=>$adresse,
+				'emailDemandeur'=>$email,
+				'telephoneDemandeur'=>$telephone,
+				'genre'=>$genre,
+				'prenomDemandeur'=>$prenom,
+				'dateNaissance'=>$datenaiss,
+				'nationalite'=>$nationalite,
+				'etatCivil'=>$etatcivil,
+				'pseudo'=>$pseudo,
+				'pwd'=>$pwd,
+				'etat'=>$etat
+			);
+
+			$this->demandeurDAO->sign_up($data);
 		}	
 		else{
 			
