@@ -18,7 +18,7 @@
             <a href="#" class="brand-logo"><i class="material-icons large left" id="title-icon">work</i> Job-Portal</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li class="active"><a href="#"><i class="material-icons large left" id="">home</i></a></li>
-                <li><a href="<?= base_url(); ?>login.php">Login</a></li>
+                <li><a href="login.php">Login</a></li>
                 <li><a href="<?= base_url(); ?>sign_up.php">Inscription</a></li>
             </ul>
         </div>

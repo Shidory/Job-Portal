@@ -16,8 +16,8 @@
             <a href="#" class="brand-logo"><i class="material-icons large left" id="title-icon">work</i> Job-Portal</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li class="active"><a href="#"><i class="material-icons large left" id="">home</i></a></li>
-                <li><a href="<?= site_url('welcome/V_login')>login.php">Login</a></li>
-                <li><a href="inscription.html">Inscription</a></li>
+                <li><a href="">Login</a></li>
+                <li><a href="inscription.html">Sign up</a></li>
             </ul>
         </div>
     </nav>
@@ -29,7 +29,7 @@
                 <div class="card-content black-text">
                     <span class="card-title center">Login</span>
                     <div class="divider"></div>
-                    <form class="col s12">
+                    <?= form_open('welcome/C_login','class="col s12'); ?>
                         <div class="row">
                             <div class="input-field col s12">
                                 <i class="material-icons prefix">mail_outline</i>
@@ -55,10 +55,8 @@
                                 </div>
                             </div>
                         </div>
-
-
-                    </form>
-                    <a class="waves-effect waves-light btn center">Se connecter</a>
+                        <button type="submit" class="waves-effect waves-light btn center">Login</button>
+                    <?= form_close(); ?>
                 </div>
             </div>
         </div>

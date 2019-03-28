@@ -114,7 +114,7 @@ class Welcome extends CI_Controller {
 	}
 
 	#####################################################################
-	public function login(){
+	public function C_login(){
 
 		$email = $this->input->post('email');
 		$pwd = $this->input->post('pwd');
