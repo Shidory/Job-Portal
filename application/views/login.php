@@ -1,73 +1,67 @@
-<!DOCTYPE HTML>
-<html lang="zxx">
-
+<html lang="en">
 <head>
-	<title>Latest Login Form Responsive Widget Template :: w3layouts</title>
-	<!-- Meta tag Keywords -->
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="UTF-8" />
-	<meta name="keywords" content="Latest Login Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
-	<script>
-		addEventListener("load", function () {
-			setTimeout(hideURLbar, 0);
-		}, false);
-
-		function hideURLbar() {
-			window.scrollTo(0, 1);
-		}
-	</script>
-	<!-- Meta tag Keywords -->
-
-	<!-- css files -->
-	<link rel="stylesheet" href="<?= base_url(); ?>assets/latest/css/style.css" type="text/css" media="all" />
-	<!-- Style-CSS -->
-	<link href="<?= base_url(); ?>assets/latest/css/font-awesome.min.css" rel="stylesheet">
-	<!-- Font-Awesome-Icons-CSS -->
-	<!-- //css files -->
-
-	<!-- web-fonts -->
-	<link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:200,200i,300,300i,400,400i,600,600i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
-	 rel="stylesheet">
-	<!-- //web-fonts -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="<?= site_url(); ?>assets/materialise.css">
+    <link rel="stylesheet" href="<?= base_url(); ?>assets/font.css">
+    <script src="<?= base_url(); ?>assets/materialize.js"></script>
+    <link rel="stylesheet" href="<?= base_url(); ?>assets/style.css">
+    <title>Job Portal</title>
 </head>
-
 <body>
-	<div class="main-bg">
-		<!-- title -->
-		<h1></h1>
-		<!-- //title -->
-		<!-- content -->
-		<div class="sub-main-w3">
-			<div class="bg-content-w3pvt">
-				<div class="top-content-style">
-					<img src="images/user.jpg" alt="" />
-				</div>
-				<?= form_open("welcome/do_upload");?>
-					<p class="legend">Log in Here<span class="fa fa-hand-o-down"></span></p>
-                    <div class="input">
-                        <input type="text" class="form-control" placeholder="E-mail" name="email">
-						<span class="fa fa-envelope"></span>
-                    </div>
-                    <div class="input">
-                        <input type="password" class="form-control" placeholder="Mot de passe" name="pwd">
-						<span class="fa fa-unlock"></span>
-					</div>
-					<button type="submit" class="btn submit">
-						<span class="fa fa-sign-in"></span>
-					</button>
-				</form>
-				<a href="V_sign_in" class="bottom-text-w3ls">Sign in</a>
-			</div>
-		</div>
-		<!-- //content -->
-		<!-- copyright -->
-		<div class="copyright">
-			<h2>&copy; 2019 JobPortal. Design by Shidory.
-				<a href="http://BeGreat.com" target="_blank">BeGreat</a>
-			</h2>
-		</div>
-		<!-- //copyright -->
-	</div>
-</body>
+<div class="row">
+    <nav class="blue-grey">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo"><i class="material-icons large left" id="title-icon">work</i> Job-Portal</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li class="active"><a href="#"><i class="material-icons large left" id="">home</i></a></li>
+                <li><a href="<?= site_url('welcome/V_login')>login.php">Login</a></li>
+                <li><a href="inscription.html">Inscription</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
 
+    <div class="row">
+        <div class="col s12 m6 offset-m3">
+            <div class="card">
+                <div class="card-content black-text">
+                    <span class="card-title center">Login</span>
+                    <div class="divider"></div>
+                    <form class="col s12">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">mail_outline</i>
+                                <input id="icon_prefix" type="email" class="validate">
+                                <label for="icon_prefix">Email</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <i class="material-icons prefix">lock</i>
+                                <input id="icon_telephone" type="password" class="validate">
+                                <label for="icon_telephone">Password</label>
+                            </div>
+                            <div class="left">
+                                <!-- Switch -->
+                                <div class="switch">
+                                    Type :
+                                    <label>
+                                        Personne
+                                        <input type="checkbox" name="type">
+                                        <span class="lever"></span> Entreprise
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </form>
+                    <a class="waves-effect waves-light btn center">Se connecter</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
 </html>
