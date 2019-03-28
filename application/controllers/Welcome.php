@@ -9,7 +9,7 @@ class Welcome extends CI_Controller {
 
 		parent::__construct();
 
-		$this->load->model('DemandeurDao');
+		$this->load->model('DemandeurDAO');
 		
 	}
 
@@ -99,10 +99,9 @@ class Welcome extends CI_Controller {
 				'etatCivil'=>$etatcivil,
 				'pseudo'=>$pseudo,
 				'pwd'=>$pwd,
-				'etat'=>$etat
 			);
 
-			$this->demandeurDAO->sign_up($data);
+			$this->DemandeurDAO->sign_up($data);
 		}	
 		else{
 			
