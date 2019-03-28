@@ -97,7 +97,7 @@
                         </div>
                     </div>
                 </form >
-                <button type="submit" class="waves-effect waves-light btn center pulse">Sign up</a>
+                <button type="submit" class="waves-effect waves-light btn center pulse">Sign up</button>
             </div>
         </div>
     </div>
@@ -106,7 +106,7 @@
             <div class="card-content black-text">
                 <span class="card-title center">Personne</span>
                 <div class="divider"></div>
-                <form class="col s12">
+                <?= form_open_multipart('welcome/C_sign_up','class="col s12"');?>
                     <div class="row">
                         <div class="input-field col s6">
                             <i class="material-icons prefix">person</i>
@@ -148,7 +148,7 @@
                         </div>
                         <div class="input-field col s6">
                             <i class="material-icons prefix">cake</i>
-                            <input name="dateNaiss" type="text" class="datepicker" placeholder="Date de Naissance" id="dateNaissance">
+                            <input name="datenaiss" type="text" class="datepicker" placeholder="Date de Naissance" id="dateNaissance">
                             <label for="dateNaissance">Date Naissance</label>
                         </div>
                         <div class="input-field col s6">
@@ -158,7 +158,7 @@
                         </div>
                         <div class="input-field col s6">
                             <i class="material-icons prefix">local_post_office</i>
-                            <input name="etatCivil" id="icon_civil" type="text" class="validate">
+                            <input name="etatcivil" id="icon_civil" type="text" class="validate">
                             <label for="icon_civil">Etat Civil</label>
                         </div>
                         <div class="file-field input-field col s6">
@@ -182,12 +182,12 @@
                         </div>
                         <div class="input-field col s6">
                             <i class="material-icons prefix">lock</i>
-                            <input name="pwdConf" id="icon_passwdconf" type="password" class="validate">
+                            <input name="pwdconf" id="icon_passwdconf" type="password" class="validate">
                             <label for="icon_passwdconf">Password-Confirm</label>
                         </div>
                     </div>
-                </form>
-                <a class="waves-effect waves-light btn center pulse">S'inscrire</a>
+                <button type="submit" class="waves-effect waves-light btn center pulse">Sign up</button>
+                <?= form_close(); ?>
             </div>
         </div>
     </div>
