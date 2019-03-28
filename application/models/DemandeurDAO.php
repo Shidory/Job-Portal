@@ -6,5 +6,9 @@
             $table = "demandeur";
             return $this->db->insert($table, $data);
         }
+
+        public function M_login($data){
+            
+        }
     }
 ?>
