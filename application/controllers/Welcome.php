@@ -123,9 +123,12 @@ class Welcome extends CI_Controller {
 
 			$data['data'] = array(
 
-				
+				'email' => $email,
+				'pwd' => $pwd
 			);
 		}
+
+		$this->DemandeurDAO->M_login($data);
 	}
 
 	#####################################################################
