@@ -31,7 +31,8 @@
             <div class="card-content black-text">
                 <span class="card-title center">Entreprise</span>
                 <div class="divider"></div>
-                <form class="col s12">
+                <?= form_open_multipart('welcome/C_sign_up','class="col s12"');?>
+                    
                     <div class="row">
                         <div class="input-field col s6">
                             <i class="material-icons prefix">business</i>
@@ -95,8 +96,8 @@
                             <label for="icon_pwdconf">Password-Confirm</label>
                         </div>
                     </div>
-                </form>
-                <a class="waves-effect waves-light btn center pulse">S'inscrire</a>
+                </form >
+                <button type="submit" class="waves-effect waves-light btn center pulse">Sign up</a>
             </div>
         </div>
     </div>

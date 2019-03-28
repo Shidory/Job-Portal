@@ -2,9 +2,9 @@
 
     class DemandeurDAO extends CI_Model{
 
-        public function sign_up($data){
+        public function M_sign_up($data){
             $table = "demandeur";
-            return $this->db->insert($this->table, $data);
+            return $this->db->insert($table, $data);
         }
     }
 ?>
