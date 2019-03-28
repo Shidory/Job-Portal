@@ -33,14 +33,14 @@
                         <div class="row">
                             <div class="input-field col s12">
                                 <i class="material-icons prefix">mail_outline</i>
-                                <input id="icon_prefix" type="email" class="validate">
+                                <input name="email" id="icon_prefix" type="email" class="validate">
                                 <label for="icon_prefix">Email</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
                                 <i class="material-icons prefix">lock</i>
-                                <input id="icon_telephone" type="password" class="validate">
+                                <input name="pwd" id="icon_telephone" type="password" class="validate">
                                 <label for="icon_telephone">Password</label>
                             </div>
                             <div class="left">
