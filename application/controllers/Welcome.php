@@ -118,6 +118,14 @@ class Welcome extends CI_Controller {
 
 		$email = $this->input->post('email');
 		$pwd = $this->input->post('pwd');
+
+		if(isset($email, $pwd)){
+
+			$data['data'] = array(
+
+				
+			);
+		}
 	}
 
 	#####################################################################
