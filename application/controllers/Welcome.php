@@ -103,6 +103,7 @@ class Welcome extends CI_Controller {
 			);
 
 			$this->DemandeurDAO->M_sign_up($data);
+			$this->load->view('home');
 		}	
 		else{
 			
