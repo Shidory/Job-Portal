@@ -78,11 +78,12 @@ class Welcome extends CI_Controller {
 		$etatcivil = $this->input->post('etatcivil');
 		$pseudo = $this->input->post('pseudo');
 		$pwd =	$this->input->post('pwd');
+		$pwdconf =	$this->input->post('pwdconf');
 		
 		if (isset($nom, $prenom, $titre, $adresse, $email, $telephone, $genre, $datenaiss, 
-		$nationalite, $etatcivil, $pseudo, $pwd
+		$nationalite, $etatcivil, $pseudo, $pwd, $pwdconf
 		)){
-
+			
 			$data = array(
 				
 				'nomDemandeur'=>$nom,
@@ -101,7 +102,7 @@ class Welcome extends CI_Controller {
 				'pwd'=>$pwd,
 			);
 
-			$this->DemandeurDAO->sign_up($data);
+			$this->DemandeurDAO->M_sign_up($data);
 		}	
 		else{
 			
