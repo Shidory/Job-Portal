@@ -1,0 +1,19 @@
+#latel-nav{
+    height: 100%;
+}
+#body{
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+#title-icon {
+    position: relative;
+}
+main {
+    flex: 1 0 auto;
+}
+.page-footer{
+    padding-top: 0px;
+
+}

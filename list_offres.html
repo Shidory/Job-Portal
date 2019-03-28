@@ -1,0 +1,108 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/materialise.css">
+    <link rel="stylesheet" href="assets/font.css">
+    <script src="assets/materialize.js"></script>
+    <link rel="stylesheet" href="assets/style.css">
+    <title>Job Portal</title>
+</head>
+<body>
+<div class="row">
+    <nav class="blue-grey">
+        <div class="nav-wrapper">
+            <a href="#" class="brand-logo"><i class="material-icons large left" id="title-icon">work</i> Job-Portal</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li class="active"><a href="#"><i class="material-icons large left" id="">home</i></a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="inscription.html">Inscription</a></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<h4 class="center blue-grey-text">Liste Offre</h4>
+<div class="row">
+    <div class="col s12 m12">
+        <div class="card">
+            <div class="card-content black-text">
+                <p class="">
+                    <a class="waves-effect waves-light btn" href="add_offre.html"><i class="material-icons left">add</i>Ajouter Offre</a>
+                </p>
+
+                <ul class="collapsible z-depth-0">
+                    <li>
+                        <div class="collapsible-header">
+                            <div class="col s1">1.</div>
+                            <div class="col s5">Comptable</div>
+                            <div class="col s3">2019-03-12</div>
+                            <div class="col s3">2019-03-19</div>
+                        </div>
+                        <div class="collapsible-body">
+                            <h5><span>Postulants(1)</span></h5>
+                            <table class="responsive-table striped highlight">
+                                <thead>
+                                    <tr>
+                                        <th>No.</th>
+                                        <th>Noms</th>
+                                        <th>Adresse</th>
+                                        <th>Email</th>
+                                        <th>Telephone</th>
+                                        <th>Genre</th>
+                                        <th>Nationalite</th>
+                                        <th>Etat Civil</th>
+                                        <th>Date de Naissance</th>
+                                        <th>Date Postuler</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Tubongye Roland Beni</td>
+                                        <td>rubi</td>
+                                        <td>roland.beni1@gmail.com</td>
+                                        <td>+243991551044</td>
+                                        <td>M</td>
+                                        <td>Congolaise</td>
+                                        <td>Celibataire</td>
+                                        <td>03/08/1900</td>
+                                        <td>12/03/2019</td>
+                                        <td><a class="waves-effect waves-light btn right" href="#"><i class="material-icons left">phone</i>Call</a></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="page-footer blue-grey">
+    <div class="footer-copyright center">
+        <div class="container">
+            © 2014 Designed By
+            <a class="grey-text text-lighten-4" href="https://github.com/robenkr">Roben</a>
+        </div>
+    </div>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('.collapsible');
+        var instances = M.Collapsible.init(elems);
+
+        var elems = document.querySelectorAll('select');
+        var instances = M.FormSelect.init(elems);
+
+        var elems = document.querySelectorAll('.datepicker');
+        var options = {
+            format: "yyyy-mm-dd"
+        };
+        var instances = M.Datepicker.init(elems, options);
+    });
+</script>
+</body>
+</html>
