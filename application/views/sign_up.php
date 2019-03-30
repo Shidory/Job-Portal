@@ -18,20 +18,20 @@
             <a href="#" class="brand-logo"><i class="material-icons large left" id="title-icon">work</i> Job-Portal</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li class="active"><a href="#"><i class="material-icons large left" id="">home</i></a></li>
-                <li><a href="login.php">Login</a></li>
-                <li><a href="<?= base_url(); ?>sign_up.php">Inscription</a></li>
+                <li><a href="<?= base_url(); ?>welcome/V_login">Login</a></li>
+                <li><a href="<?= base_url(); ?>welcom/V_sign_up">Sign up</a></li>
             </ul>
         </div>
     </nav>
 </div>
-<h4 class="center blue-grey-text"><?php echo ucfirst($title);?></h4>
+<h4 class="center blue-grey-text"><!--?php echo ucfirst($title);?--></h4>
 <div class="row">
     <div class="col s12 m5 offset-m1">
         <div class="card">
             <div class="card-content black-text">
                 <span class="card-title center">Entreprise</span>
                 <div class="divider"></div>
-                <?php echo form_open_multipart('welcome/sign_up','class =""');?>
+                <?= form_open_multipart('welcome/C_sign_up','class =""'); ?>
                     <div class="row">
                         <div class="input-field col s6">
                             <i class="material-icons prefix">business</i>
@@ -104,7 +104,7 @@
                             <?php echo form_error('pwdconf') ?>
                         </div>
                     </div>
-                    <button class="btn waves-effect waves-light center pulse" type="submit" name="logup" id="" value="S'inscrire">S'inscrire</button>
+                    <button class="btn waves-effect waves-light center pulse" type="submit" name="logup" id="" value="S'inscrire">Sign up</button>
                 </form>
                 <span class="red-text">(*) <strong style="font-size :12px;">champs obligatoire</strong><span>
             </div>
@@ -115,7 +115,7 @@
             <div class="card-content black-text">
                 <span class="card-title center">Personne</span>
                 <div class="divider"></div>
-                <?php echo form_open_multipart('welcome/sign_up','class =""');?>
+                <?= form_open_multipart('welcome/C_sign_up','class =""'); ?>
                     <div class="row">
                         <div class="input-field col s6">
                             <i class="material-icons prefix">person</i>
@@ -209,7 +209,7 @@
                             <?php echo form_error('pwdconf') ?>
                         </div>
                     </div>
-                    <button class="btn waves-effect waves-light center pulse" type="submit" name="logup" id="" value="S'inscrire">S'inscrire</button>
+                    <button class="btn waves-effect waves-light center pulse" type="submit" name="logup" id="" value="Sign up">Sign up</button>
                 </form>
                 <span class="red-text">(*) <strong style="font-size :12px;">champs obligatoire</strong><span>
             </div>
