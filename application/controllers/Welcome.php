@@ -148,19 +148,51 @@ class Welcome extends CI_Controller {
 				$this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Veuillez Choisir un seul type</p>');
                 redirect('welcome/V_login');
 			}
-		$email = $this->input->post('email');
-		$pwd = $this->input->post('pwd');
-
-		if(isset($email, $pwd)){
-
-			$data['data'] = array(
-
-				'email' => $email,
-				'pwd' => $pwd
-			);
-
-			$this->DemandeurDAO->M_login($data);
-		}
+			
+			if ($typePers != NULL) {
+				$user = $this->demandeurDAO->get_by_email($email);
+				if(!empty($user)){
+					if(sha1($pwd) == $user->pwd){
+						$data = array(
+							'user' => $user,
+							'type' => 'user'
+						);
+						$this->session->set_userdata($data);
+						$this->session->set_flashdata('message', '<p style="color:green;"><i class="material-icons">check</i>Bienvenue '.ucfirst($user->prenomDemandeur).'</p>');
+						redirect('accueil_user');
+					}
+					$this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Email or Password Incorrect</p>');
+                	redirect('login');
+				}else{
+					$this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Email or Password Incorrect</p>');
+                	redirect('login');
+				}
+				
+			}else if($typeEnt != NULL) {
+				$entreprise = $this->employeur_model->get_by_email($email);
+				if(!empty($entreprise)){
+					if(sha1($pwd) == $entreprise->pwd){
+						
+						$data = array(
+							'entreprise' => $entreprise,
+							'type' => 'entreprise'
+						);
+						$this->session->set_userdata($data);
+						$this->session->set_flashdata('message', '<p style="color:green;"><i class="material-icons">check</i>Bienvenue</p>');
+						redirect('accueil_entreprise');
+					}
+					$this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Email or Password Incorrect</p>');
+                	redirect('login');
+				}else{
+					$this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Email or Password Incorrect</p>');
+                	redirect('login');
+				}
+			}else{
+                $this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Il est important de preciser le type!</p>');
+                redirect('login');
+            }
+              
+        }
 		
 	}
 
