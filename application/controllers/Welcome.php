@@ -148,9 +148,9 @@ class Welcome extends CI_Controller {
 				$this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Veuillez Choisir un seul type</p>');
                 redirect('welcome/V_login');
 			}
-			
+
 			if ($typePers != NULL) {
-				$user = $this->demandeurDAO->get_by_email($email);
+				$user = $this->DemandeurDAO->get_by_email($email);
 				if(!empty($user)){
 					if(sha1($pwd) == $user->pwd){
 						$data = array(
