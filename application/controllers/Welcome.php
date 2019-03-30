@@ -137,7 +137,17 @@ class Welcome extends CI_Controller {
         if ($this->form_validation->run() == FALSE) {
             $this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Remplissez les champs obligatoires</p>');
             redirect('welcome/V_login');
-        }
+		}
+		else {
+            $pwd = $this->input->post('pwd');
+            $email = $this->input->post('email',TRUE);
+			$typePers = $this->input->post('typePers',TRUE);
+			$typeEnt = $this->input->post('typeEnt',TRUE);
+			
+			if($typePers != NULL && $typeEnt != NULL){
+				$this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Veuillez Choisir un seul type</p>');
+                redirect('welcome/V_login');
+			}
 		$email = $this->input->post('email');
 		$pwd = $this->input->post('pwd');
 
