@@ -65,52 +65,83 @@ class Welcome extends CI_Controller {
 
 	#####################################################################
 	public function C_sign_up(){
-
-		$nom = $this->input->post('nom');
-		$prenom = $this->input->post('prenom');
-		$titre = $this->input->post('titre');
-		$adresse = $this->input->post('adresse');
-		$email = $this->input->post('email');
-		$telephone = $this->input->post('telephone');
-		$genre = $this->input->post('genre');
-		$datenaiss = $this->input->post('datenaiss');
-		$nationalite = $this->input->post('nationalite');
-		$etatcivil = $this->input->post('etatcivil');
-		$pseudo = $this->input->post('pseudo');
-		$pwd =	$this->input->post('pwd');
-		$pwdconf =	$this->input->post('pwdconf');
 		
-		if (isset($nom, $prenom, $titre, $adresse, $email, $telephone, $genre, $datenaiss, 
-		$nationalite, $etatcivil, $pseudo, $pwd, $pwdconf
-		)){
-			
-			$data = array(
-				
-				'nomDemandeur'=>$nom,
-				'prenomDemandeur'=>$prenom,
-				'titre'=>$titre,
-				'prenomDemandeur'=>$prenom,
-				'adresseDemandeur'=>$adresse,
-				'emailDemandeur'=>$email,
-				'telephoneDemandeur'=>$telephone,
-				'genre'=>$genre,
-				'prenomDemandeur'=>$prenom,
-				'dateNaissance'=>$datenaiss,
-				'nationalite'=>$nationalite,
-				'etatCivil'=>$etatcivil,
-				'pseudo'=>$pseudo,
-				'pwd'=>$pwd,
-			);
+		$this->_rules();
+        if ($this->form_validation->run() == FALSE) {
+            $this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Remplissez les champs obligatoires</p>');
+            redirect('sign_up');
+		} 
+		else {
 
-			$this->DemandeurDAO->M_sign_up($data);
-			$this->load->view('home');
-		}	
-		else{
-			
-			$error['error'] = 'Erreur dans les données';
-			$this->load->view('erreur', $error);
-			
+			$pwd = $this->input->post('pwd');
+            $pwdconf = $this->input->post('pwdconf');
+            $email = $this->input->post('emailDemandeur',TRUE);
+            $pseudo = $this->input->post('pseudo',TRUE);
+            $verifEmail = $this->demandeurDAO->get_by_email($email);
+			$verifPseudo = $this->demandeurDAO->get_by_pseudo($pseudo);
+
+			if(empty($verifEmail)){
+
+                if(empty($verifPseudo)){
+
+                    if ($pwd == $pwdconf){
+
+						$profile = NULL;
+						
+						if($_FILES['imageProfile']['name'] != '')
+						  
+                            $profile = $this->upload_image();
+							$nom = $this->input->post('nom', TRUE);
+							$prenom = $this->input->post('prenom', TRUE);
+							$titre = $this->input->post('titre', TRUE);
+							$adresse = $this->input->post('adresse', TRUE);
+							$email = $this->input->post('email', TRUE);
+							$telephone = $this->input->post('telephone', TRUE);
+							$genre = $this->input->post('genre', TRUE);
+							$datenaiss = $this->input->post('datenaiss', TRUE);
+							$nationalite = $this->input->post('nationalite', TRUE);
+							$etatcivil = $this->input->post('etatcivil', TRUE);
+							$pseudo = $this->input->post('pseudo', TRUE);
+							$pwd =	$this->input->post('pwd', TRUE);
+							$pwdconf =	$this->input->post('pwdconf', TRUE);
+
+							$data = array(
+								
+								'nomDemandeur'=>$nom,
+								'prenomDemandeur'=>$prenom,
+								'titre'=>$titre,
+								'prenomDemandeur'=>$prenom,
+								'adresseDemandeur'=>$adresse,
+								'emailDemandeur'=>$email,
+								'telephoneDemandeur'=>$telephone,
+								'genre'=>$genre,
+								'prenomDemandeur'=>$prenom,
+								'dateNaissance'=>$datenaiss,
+								'nationalite'=>$nationalite,
+								'etatCivil'=>$etatcivil,
+								'pseudo'=>$pseudo,
+								'pwd'=>$pwd,
+							);
+
+							try{
+
+								$this->DemandeurDAO->M_sign_up($data);
+								$this->session->set_flashdata('message', '<p style="color:green;"><i class="material-icons">check</i> Create Record Success</p>');
+                            	redirect('home');
+							}
+			catch(Exception $e){
+				$error['error'] = 'Erreur dans les données';
+				$this->load->view('erreur', $error);
+		   } 
+		   /*finally {
+				redirect('root/liste');
+		   }*/
 		}
+		else{
+
+			$this->load->view('sign_up');
+		}
+		
 	}
 
 	#####################################################################
@@ -126,14 +157,35 @@ class Welcome extends CI_Controller {
 				'email' => $email,
 				'pwd' => $pwd
 			);
-		}
 
-		$this->DemandeurDAO->M_login($data);
+			$this->DemandeurDAO->M_login($data);
+		}
+		
 	}
 
 	#####################################################################
 	public function upload_profile(){
 
 	}
+
+	#####################################################################
+	public function _rules() {
+
+        $this->form_validation->set_rules('nomDemandeur', 'nomdemandeur', 'trim|required');
+        $this->form_validation->set_rules('prenomDemandeur', 'prenomdemandeur', 'trim|required');
+        $this->form_validation->set_rules('titre', 'titre', 'trim|required');
+        $this->form_validation->set_rules('adresseDemandeur', 'adressedemandeur', 'trim|required');
+        $this->form_validation->set_rules('emailDemandeur', 'emaildemandeur', 'trim|valid_email|required');
+        $this->form_validation->set_rules('telephoneDemandeur', 'telephonedemandeur', 'trim|required');
+        $this->form_validation->set_rules('genre', 'genre', 'trim|required');
+        $this->form_validation->set_rules('dateNaissance', 'datenaissance', 'trim|required');
+        $this->form_validation->set_rules('nationalite', 'nationalite', 'trim|required');
+        $this->form_validation->set_rules('etatCivil', 'etatcivil', 'trim|required');
+        $this->form_validation->set_rules('imageProfile', 'imageprofile', 'trim');
+        $this->form_validation->set_rules('pseudo', 'pseudo', 'trim');
+        $this->form_validation->set_rules('pwd', 'pwd', 'trim|required');
+        $this->form_validation->set_rules('pwdconf', 'pwdConfirmation', 'trim|required');
+        $this->form_validation->set_error_delimiters('<span class="text-danger" style="color:red;">', '</span>');
+    }
 }
 ?>
