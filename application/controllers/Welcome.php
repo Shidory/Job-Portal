@@ -94,6 +94,7 @@ class Welcome extends CI_Controller {
 							'dateNaissance'=>$datenaiss,
 							'nationalite'=>$nationalite,
 							'etatCivil'=>$etatcivil,
+							'imageProfile' => $profile,
 							'pseudo'=>$pseudo,
 							'pwd'=>$pwd,
 						);
