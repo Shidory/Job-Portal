@@ -28,7 +28,7 @@ class Welcome extends CI_Controller {
 
 	#####################################################################
 	public function V_login(){
-
+		
 		$this->load->view('login');
 	}
 
@@ -133,6 +133,11 @@ class Welcome extends CI_Controller {
 	#####################################################################
 	public function C_login(){
 
+		$this->_rules();
+        if ($this->form_validation->run() == FALSE) {
+            $this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Remplissez les champs obligatoires</p>');
+            redirect('welcome/V_login');
+        }
 		$email = $this->input->post('email');
 		$pwd = $this->input->post('pwd');
 
@@ -195,14 +200,16 @@ class Welcome extends CI_Controller {
             else{
                 
                 $error = '<p style="color:red;"><i class="material-icons">cancel</i> Format invalide, seul les formats: JPEG, PNG sont autorisés</p>';
-                $this->session->set_flashdata('message', $error);
-                redirect('welcome/V_sign_up'); 
+				$this->session->set_flashdata('message', $error);
+				echo('erreur');
+                //redirect('welcome/V_sign_up'); 
             }
         }
         else{
             $error = '<p style="color:red;"><i class="material-icons">cancel</i> Taille invalide, importez un fichier de taille inférieur à 100ko</p>';
-            $this->session->set_flashdata('message', $error);
-            redirect('welcome/V_sign_up');
+			$this->session->set_flashdata('message', $error);
+			echo('erreur');
+            //redirect('welcome/V_sign_up');
         }
     }
 }
