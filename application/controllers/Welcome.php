@@ -69,7 +69,7 @@ class Welcome extends CI_Controller {
 		$this->_rules();
         if ($this->form_validation->run() == FALSE) {
             $this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Remplissez les champs obligatoires</p>');
-            redirect('sign_up');
+            redirect('welcome/sign_up');
 		} 
 		else {
 
@@ -92,16 +92,16 @@ class Welcome extends CI_Controller {
 						$profile = $this->upload_image();
 
 						$profile = $this->upload_image();
-						$nom = $this->input->post('nom', TRUE);
-						$prenom = $this->input->post('prenom', TRUE);
+						$nom = $this->input->post('nomDemandeur', TRUE);
+						$prenom = $this->input->post('prenomDemandeur', TRUE);
 						$titre = $this->input->post('titre', TRUE);
-						$adresse = $this->input->post('adresse', TRUE);
-						$email = $this->input->post('email', TRUE);
-						$telephone = $this->input->post('telephone', TRUE);
+						$adresse = $this->input->post('adresseDemandeur', TRUE);
+						$email = $this->input->post('emailDemandeur', TRUE);
+						$telephone = $this->input->post('telephoneDemandeur', TRUE);
 						$genre = $this->input->post('genre', TRUE);
-						$datenaiss = $this->input->post('datenaiss', TRUE);
+						$datenaiss = $this->input->post('dateNaissance', TRUE);
 						$nationalite = $this->input->post('nationalite', TRUE);
-						$etatcivil = $this->input->post('etatcivil', TRUE);
+						$etatcivil = $this->input->post('etatCivil', TRUE);
 						$pseudo = $this->input->post('pseudo', TRUE);
 						$pwd =	$this->input->post('pwd', TRUE);
 						$pwdconf =	$this->input->post('pwdconf', TRUE);
