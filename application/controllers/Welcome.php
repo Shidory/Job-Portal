@@ -39,11 +39,11 @@ class Welcome extends CI_Controller {
 	}
 	#####################################################################
 	public function C_sign_up(){
-		
+
 		$this->_rules();
         if ($this->form_validation->run() == FALSE) {
             $this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Remplissez les champs obligatoires</p>');
-            redirect('welcome/sign_up');
+			redirect('welcome/sign_up');
 		} 
 		else {
 
@@ -51,8 +51,8 @@ class Welcome extends CI_Controller {
             $pwdconf = $this->input->post('pwdconf');
             $email = $this->input->post('emailDemandeur',TRUE);
             $pseudo = $this->input->post('pseudo',TRUE);
-            $verifEmail = $this->demandeurDAO->get_by_email($email);
-			$verifPseudo = $this->demandeurDAO->get_by_pseudo($pseudo);
+            $verifEmail = $this->DemandeurDAO->get_by_email($email);
+			$verifPseudo = $this->DemandeurDAO->get_by_pseudo($pseudo);
 
 			if(empty($verifEmail)){
 
