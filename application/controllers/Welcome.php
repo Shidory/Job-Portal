@@ -87,59 +87,70 @@ class Welcome extends CI_Controller {
                     if ($pwd == $pwdconf){
 
 						$profile = NULL;
-						
+							
 						if($_FILES['imageProfile']['name'] != '')
-						  
-                            $profile = $this->upload_image();
-							$nom = $this->input->post('nom', TRUE);
-							$prenom = $this->input->post('prenom', TRUE);
-							$titre = $this->input->post('titre', TRUE);
-							$adresse = $this->input->post('adresse', TRUE);
-							$email = $this->input->post('email', TRUE);
-							$telephone = $this->input->post('telephone', TRUE);
-							$genre = $this->input->post('genre', TRUE);
-							$datenaiss = $this->input->post('datenaiss', TRUE);
-							$nationalite = $this->input->post('nationalite', TRUE);
-							$etatcivil = $this->input->post('etatcivil', TRUE);
-							$pseudo = $this->input->post('pseudo', TRUE);
-							$pwd =	$this->input->post('pwd', TRUE);
-							$pwdconf =	$this->input->post('pwdconf', TRUE);
+						$profile = $this->upload_image();
 
-							$data = array(
-								
-								'nomDemandeur'=>$nom,
-								'prenomDemandeur'=>$prenom,
-								'titre'=>$titre,
-								'prenomDemandeur'=>$prenom,
-								'adresseDemandeur'=>$adresse,
-								'emailDemandeur'=>$email,
-								'telephoneDemandeur'=>$telephone,
-								'genre'=>$genre,
-								'prenomDemandeur'=>$prenom,
-								'dateNaissance'=>$datenaiss,
-								'nationalite'=>$nationalite,
-								'etatCivil'=>$etatcivil,
-								'pseudo'=>$pseudo,
-								'pwd'=>$pwd,
-							);
+						$profile = $this->upload_image();
+						$nom = $this->input->post('nom', TRUE);
+						$prenom = $this->input->post('prenom', TRUE);
+						$titre = $this->input->post('titre', TRUE);
+						$adresse = $this->input->post('adresse', TRUE);
+						$email = $this->input->post('email', TRUE);
+						$telephone = $this->input->post('telephone', TRUE);
+						$genre = $this->input->post('genre', TRUE);
+						$datenaiss = $this->input->post('datenaiss', TRUE);
+						$nationalite = $this->input->post('nationalite', TRUE);
+						$etatcivil = $this->input->post('etatcivil', TRUE);
+						$pseudo = $this->input->post('pseudo', TRUE);
+						$pwd =	$this->input->post('pwd', TRUE);
+						$pwdconf =	$this->input->post('pwdconf', TRUE);
 
-							try{
+						$data = array(
+									
+							'nomDemandeur'=>$nom,
+							'prenomDemandeur'=>$prenom,
+							'titre'=>$titre,
+							'prenomDemandeur'=>$prenom,
+							'adresseDemandeur'=>$adresse,
+							'emailDemandeur'=>$email,
+							'telephoneDemandeur'=>$telephone,
+							'genre'=>$genre,
+							'prenomDemandeur'=>$prenom,
+							'dateNaissance'=>$datenaiss,
+							'nationalite'=>$nationalite,
+							'etatCivil'=>$etatcivil,
+							'pseudo'=>$pseudo,
+							'pwd'=>$pwd,
+						);
 
-								$this->DemandeurDAO->M_sign_up($data);
-								$this->session->set_flashdata('message', '<p style="color:green;"><i class="material-icons">check</i> Create Record Success</p>');
-                            	redirect('home');
-							}
-			catch(Exception $e){
-				$error['error'] = 'Erreur dans les données';
-				$this->load->view('erreur', $error);
-		   } 
-		   /*finally {
-				redirect('root/liste');
-		   }*/
-		}
-		else{
+						try{
 
-			$this->load->view('sign_up');
+							$this->DemandeurDAO->M_sign_up($data);
+							$this->session->set_flashdata('message', '<p style="color:green;"><i class="material-icons">check</i> Create Record Success</p>');
+							redirect('home');
+						}
+						catch (Exception $e){
+							$this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Create Record Failed >>'.$e.'</p>');
+							redirect('inscription');
+						}
+							
+					}
+					else{
+						$this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Password not much</p>');
+						redirect('inscription');
+					}
+				}
+				else{
+					$this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Ce Pseudo est deja attribué</p>');
+					redirect('inscription');
+				}
+			}
+			else{
+				$this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Cet Email existe deja</p>');
+				redirect('inscription');
+			}
+				
 		}
 		
 	}
