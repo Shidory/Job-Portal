@@ -33,13 +33,19 @@
 
             $this->db->order_by($this->id, 'DESC');
             $this->db->where('emailDemandeur',$email);
+
             return $this->db->get($this->table_dem)->row();
         }
 
         #################################################################
         function get_by_pseudo($pseudo){
 
-        
+            $this->db->order_by($this->id, 'DESC');
+            $this->db->where('pseudo',$pseudo);
+
+            return $this->db->get($this->table_dem)->result();
         }
+
+        #################################################################
     }
 ?>
