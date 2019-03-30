@@ -197,6 +197,38 @@ class Welcome extends CI_Controller {
         $this->form_validation->set_rules('pwd', 'pwd', 'trim|required');
         $this->form_validation->set_rules('pwdconf', 'pwdConfirmation', 'trim|required');
         $this->form_validation->set_error_delimiters('<span class="text-danger" style="color:red;">', '</span>');
+	}
+	
+	public function upload_image(){
+        if ($_FILES['imageProfile']['size'] <= 10240000){
+
+            $url="/uploads/demandeur";
+            $image=basename($_FILES['imageProfile']['name']);
+            $image=str_replace(' ','|',$image);
+            $type=explode(".",$image);
+            $type=$type[count($type)-1];
+
+            if(in_array($type,array('jpg','jpeg','png','JPG','JPEG','PNG')))
+            {
+                $tmppath="uploads/demandeur/".$this->input->post('nomDemandeur',TRUE).".".$type;
+                if(is_uploaded_file($_FILES["imageProfile"]["tmp_name"]))
+                {
+                    move_uploaded_file($_FILES['imageProfile']['tmp_name'],$tmppath);
+                    return $tmppath;
+                }
+            }
+            else{
+                
+                $error = '<p style="color:red;"><i class="material-icons">cancel</i> Format invalide, seul les formats: JPEG, PNG sont autorisés</p>';
+                $this->session->set_flashdata('message', $error);
+                redirect('inscription'); 
+            }
+        }
+        else{
+            $error = '<p style="color:red;"><i class="material-icons">cancel</i> Taille invalide, importez un fichier de taille inférieur à 100ko</p>';
+            $this->session->set_flashdata('message', $error);
+            redirect('inscription');
+        }
     }
 }
 ?>
