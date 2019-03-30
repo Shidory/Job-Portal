@@ -8,13 +8,14 @@
             parent::__construct();
 
             $table_dem="demandeur";
+            $id = "idDemandeur";
 
         }
 
         #################################################################
         public function M_sign_up($data){
 
-            return $this->db->insert($table_dem, $data);
+            $this->db->insert($table_dem, $data);
         }
 
         #################################################################
@@ -31,19 +32,19 @@
         #################################################################
         function get_by_email($email){
 
-            $this->db->order_by($this->id, 'DESC');
+            $this->db->order_by('idDemandeur', 'DESC');
             $this->db->where('emailDemandeur',$email);
 
-            return $this->db->get($this->table_dem)->row();
+            return $this->db->get('demandeur')->row();
         }
 
         #################################################################
         function get_by_pseudo($pseudo){
 
-            $this->db->order_by($this->id, 'DESC');
+            $this->db->order_by('idDemandeur', 'DESC');
             $this->db->where('pseudo',$pseudo);
 
-            return $this->db->get($this->table_dem)->result();
+            return $this->db->get('demandeur')->result();
         }
 
         #################################################################
