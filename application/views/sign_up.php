@@ -106,7 +106,7 @@
             <div class="card-content black-text">
                 <span class="card-title center">Personne</span>
                 <div class="divider"></div>
-                <?= form_open_multipart('welcome/C_sign_up','class="col s12"');?>
+                <?= form_open_multipart('welcome/C_sign_up','class=""');?>
                     <div class="row">
                         <div class="input-field col s6">
                             <i class="material-icons prefix">person</i>
