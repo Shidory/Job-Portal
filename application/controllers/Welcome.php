@@ -103,27 +103,27 @@ class Welcome extends CI_Controller {
 
 							$this->DemandeurDAO->M_sign_up($data);
 							$this->session->set_flashdata('message', '<p style="color:green;"><i class="material-icons">check</i> Create Record Success</p>');
-							redirect('home');
+							redirect('welcome/V_home');
 						}
 						catch (Exception $e){
 							$this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Create Record Failed >>'.$e.'</p>');
-							redirect('inscription');
+							redirect('welcome/V_sign_up');
 						}
 							
 					}
 					else{
 						$this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Password not much</p>');
-						redirect('inscription');
+						redirect('welcome/V_sign_up');
 					}
 				}
 				else{
 					$this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Ce Pseudo est deja attribué</p>');
-					redirect('inscription');
+					redirect('welcome/V_sign_up');
 				}
 			}
 			else{
 				$this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Cet Email existe deja</p>');
-				redirect('inscription');
+				redirect('welcome/V_sign_up');
 			}
 				
 		}
@@ -196,13 +196,13 @@ class Welcome extends CI_Controller {
                 
                 $error = '<p style="color:red;"><i class="material-icons">cancel</i> Format invalide, seul les formats: JPEG, PNG sont autorisés</p>';
                 $this->session->set_flashdata('message', $error);
-                redirect('inscription'); 
+                redirect('welcome/V_sign_up'); 
             }
         }
         else{
             $error = '<p style="color:red;"><i class="material-icons">cancel</i> Taille invalide, importez un fichier de taille inférieur à 100ko</p>';
             $this->session->set_flashdata('message', $error);
-            redirect('inscription');
+            redirect('welcome/V_sign_up');
         }
     }
 }
