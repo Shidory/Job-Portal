@@ -133,7 +133,7 @@ class Welcome extends CI_Controller {
 	#####################################################################
 	public function C_login(){
 		
-		$this->_rules();
+		$this->_rules_login();
         if ($this->form_validation->run() == FALSE) {
             $this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Remplissez les champs obligatoires</p>');
             redirect('welcome/V_login');
@@ -227,7 +227,7 @@ class Welcome extends CI_Controller {
 	
 	#####################################################################
 	public function _rules_login(){
-		
+
 		$this->form_validation->set_rules('email', 'Email obligatoire', 'trim|required');
 		$this->form_validation->set_rules('pwd', 'Password Obligatoire', 'trim|required');
 		$this->form_validation->set_rules('typePers', 'Type Obligatoire', 'trim');
