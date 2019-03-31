@@ -1,30 +1,4 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="<?php base_url(); ?>assets/materialise.css">
-    <link rel="stylesheet" href="<?php base_url(); ?>assets/font.css">
-    <script src="<?php base_url(); ?>assets/materialize.js"></script>
-    <script src="<?php base_url(); ?>assets/cropper.js"></script>
-    <link rel="stylesheet" href="<?php base_url(); ?>assets/cropper.css">
-    <link rel="stylesheet" href="<?php base_url(); ?>assets/style.css">
-    <title>Job Portal</title>
-</head>
-<body>
-<div class="row">
-    <nav class="blue-grey">
-        <div class="nav-wrapper">
-            <a href="#" class="brand-logo"><i class="material-icons large left" id="title-icon">work</i> Job-Portal</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li class="active"><a href="#"><i class="material-icons large left" id="">home</i></a></li>
-                <li><a href="<?= base_url(); ?>welcome/V_login">Login</a></li>
-                <li><a href="<?= base_url(); ?>welcom/V_sign_up">Sign up</a></li>
-            </ul>
-        </div>
-    </nav>
-</div>
-<h4 class="center blue-grey-text"><!--?php echo ucfirst($title);?--></h4>
+<h4 class="center blue-grey-text"><?php echo ucfirst($title); ?></h4>
 <div class="row">
     <div class="col s12 m5 offset-m1">
         <div class="card">
@@ -216,53 +190,3 @@
         </div>
     </div>
 </div>>
-<footer class="page-footer blue-grey">
-    <div class="footer-copyright center">
-        <div class="container">
-            © 2014 Designed By
-            <a class="grey-text text-lighten-4" href="https://github.com/robenkr">Roben</a>
-        </div>
-    </div>
-</footer>
-<!-- Upload photo modal-->
-<div id="modalphoto" class="modal">
-    <div class="modal-content">
-        <h4>Upload Photo</h4>
-        <p>
-        <form action="">
-            <div class="file-field input-field col s6">
-                <div class="btn">
-                    <span>File</span>
-                    <input type="file">
-                </div>
-                <div class="file-path-wrapper">
-                    <input class="file-path validate" type="text" placeholder="Image de Profile">
-                </div>
-            </div>
-            <button class="btn waves-effect waves-light" type="submit" value="Ajouter">Ajouter
-                <i class="material-icons right">add</i>
-            </button>
-        </form>
-        </p>
-    </div>
-    <div class="modal-footer">
-        <a href="#!" class="modal-close waves-effect waves-green btn-flat">Annuler</a>
-    </div>
-</div>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var elems = document.querySelectorAll('.collapsible');
-        var instances = M.Collapsible.init(elems);
-
-        var elems = document.querySelectorAll('select');
-        var instances = M.FormSelect.init(elems);;
-
-        var elems = document.querySelectorAll('.datepicker');
-        var options = {
-            format: "yyyy-mm-dd"
-        };
-        var instances = M.Datepicker.init(elems, options);
-    });
-</script>
-</body>
-</html>
