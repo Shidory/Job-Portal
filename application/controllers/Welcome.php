@@ -33,9 +33,9 @@ class Welcome extends CI_Controller {
 	}
 
 	#####################################################################
-	public function V_home(){
+	public function V_home_user(){
 
-		$this->load->view('home');
+		$this->load->view('home_user');
 	}
 	#####################################################################
 	public function C_sign_up(){
@@ -139,7 +139,7 @@ class Welcome extends CI_Controller {
             redirect('welcome/V_login');
 		}
 		else {
-			var_dump($this->input->post('pwd'));die();
+			
             $pwd = $this->input->post('pwd');
             $email = $this->input->post('email',TRUE);
 			$typePers = $this->input->post('typePers',TRUE);
@@ -163,7 +163,7 @@ class Welcome extends CI_Controller {
 						);
 						$this->session->set_userdata($data);
 						$this->session->set_flashdata('message', '<p style="color:green;"><i class="material-icons">check</i>Bienvenue '.ucfirst($user->prenomDemandeur).'</p>');
-						redirect('home_user');
+						redirect('welcome/home_user');
 					}
 					$this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Email or Password Incorrect</p>');
                 	redirect('welcom/V_login');
