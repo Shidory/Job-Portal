@@ -131,6 +131,10 @@ class Welcome extends CI_Controller {
 	}
 
 	#####################################################################
+
+	public function C_login_redirect(){
+		
+	}
 	public function C_login(){
 		
 		$this->_rules_login();
@@ -166,7 +170,7 @@ class Welcome extends CI_Controller {
 						redirect('welcome/home_user');
 					}
 					$this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Email or Password Incorrect</p>');
-                	redirect('welcom/V_login');
+                	redirect('welcome/V_login');
 				}else{
 					$this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Email or Password Incorrect</p>');
                 	redirect('welcome/V_login');
