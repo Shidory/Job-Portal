@@ -16,7 +16,7 @@ class Welcome extends CI_Controller {
 	#####################################################################
 	public function index()
 	{
-		$this->V_sign_up();
+		$this->C_sign_up_redirect();
 	}
 	#####################################################################
 	#							LOAD VIEWS								#
@@ -32,7 +32,20 @@ class Welcome extends CI_Controller {
 	#####################################################################
 	public function V_login(){
 		
+		if($this->session->user || $this->session->entreprise){
+			if($this->session->type == 'user'){
+				redirect('home_user');
+			}
+			else if($this->session->type == 'entreprise') {
+				redirect('home_entreprise');
+			}else{
+				$this->logout();
+			}
+		}
+		$data['title']= "connexion";
+		$this->load->view('_inc/header',$data);
 		$this->load->view('login');
+		$this->load->view('_inc/footer');
 	}
 
 	#####################################################################
@@ -135,7 +148,7 @@ class Welcome extends CI_Controller {
 			}
 			else{
 				$this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Cet Email existe deja</p>');
-				redirect('welcome/C_sign_up_redirect');
+				redirect('welcome/V_sign_up');
 			}
 				
 		}
