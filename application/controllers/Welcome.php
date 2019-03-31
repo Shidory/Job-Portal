@@ -132,13 +132,14 @@ class Welcome extends CI_Controller {
 
 	#####################################################################
 	public function C_login(){
-
+		
 		$this->_rules();
         if ($this->form_validation->run() == FALSE) {
             $this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Remplissez les champs obligatoires</p>');
             redirect('welcome/V_login');
 		}
 		else {
+			var_dump($this->input->post('pwd'));die();
             $pwd = $this->input->post('pwd');
             $email = $this->input->post('email',TRUE);
 			$typePers = $this->input->post('typePers',TRUE);
@@ -150,22 +151,25 @@ class Welcome extends CI_Controller {
 			}
 
 			if ($typePers != NULL) {
+
 				$user = $this->DemandeurDAO->get_by_email($email);
 				if(!empty($user)){
+
 					if(sha1($pwd) == $user->pwd){
+
 						$data = array(
 							'user' => $user,
 							'type' => 'user'
 						);
 						$this->session->set_userdata($data);
 						$this->session->set_flashdata('message', '<p style="color:green;"><i class="material-icons">check</i>Bienvenue '.ucfirst($user->prenomDemandeur).'</p>');
-						redirect('accueil_user');
+						redirect('home_user');
 					}
 					$this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Email or Password Incorrect</p>');
-                	redirect('login');
+                	redirect('welcom/V_login');
 				}else{
 					$this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Email or Password Incorrect</p>');
-                	redirect('login');
+                	redirect('welcome/V_login');
 				}
 				
 			}else if($typeEnt != NULL) {
@@ -221,6 +225,12 @@ class Welcome extends CI_Controller {
         $this->form_validation->set_error_delimiters('<span class="text-danger" style="color:red;">', '</span>');
 	}
 	
+	#####################################################################
+	public function _rules_login(){
+
+	}
+
+	#####################################################################
 	public function upload_image(){
         if ($_FILES['imageProfile']['size'] <= 10240000){
 
