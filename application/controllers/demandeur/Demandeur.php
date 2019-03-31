@@ -9,13 +9,22 @@ defined('BASEPATH') OR exit('No direct script access allowed');
             parent::__construct();
         }
 
+        #####################################################################
+        public function V_sign_up(){
+
+            $data['title']= "Sign up";
+            $this->load->view('_inc/header',$data);
+            $this->load->view('sign_up');
+            $this->load->view('_inc/footer');
+        }
+
         #################################################################
         public function C_sign_up(){
 
             $this->_rules();
             if ($this->form_validation->run() == FALSE) {
                 $this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Remplissez les champs obligatoires</p>');
-                redirect('welcome/V_Sign_up');
+                redirect('demandeur/Demandeur/V_Sign_up');
             } 
             else {
 
@@ -25,7 +34,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 $pseudo = $this->input->post('pseudo',TRUE);
                 $verifEmail = $this->DemandeurDAO->get_by_email($email);
                 $verifPseudo = $this->DemandeurDAO->get_by_pseudo($pseudo);
-
+                var_dump('$this->input->post('pwd')');die();
                 if(empty($verifEmail)){
 
                     if(empty($verifPseudo)){
@@ -79,23 +88,23 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                             }
                             catch (Exception $e){
                                 $this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Create Record Failed >>'.$e.'</p>');
-                                redirect('welcome/V_sign_up');
+                                redirect('demandeur/Demandeur/V_Sign_up');
                             }
                                 
                         }
                         else{
                             $this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Password not much</p>');
-                            redirect('welcome/C_sign_up_redirect');
+                            redirect('demandeur/Demandeur/V_Sign_up');
                         }
                     }
                     else{
                         $this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Ce Pseudo est deja attribué</p>');
-                        redirect('welcome/C_sign_up_redirect');
+                        redirect('demandeur/Demandeur/V_Sign_up');
                     }
                 }
                 else{
                     $this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Cet Email existe deja</p>');
-                    redirect('welcome/V_sign_up');
+                    redirect('demandeur/Demandeur/V_Sign_up');
                 }
                     
             }
