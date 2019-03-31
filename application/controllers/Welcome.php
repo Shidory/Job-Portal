@@ -11,6 +11,12 @@ class Welcome extends CI_Controller {
 
 		$this->load->model('DemandeurDAO');
 		
+		//verifying session
+		if(!$this->session->entreprise){
+			$this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Veuillez vous connecter</p>');
+			redirect('login');
+		}
+		
 	}
 
 	#####################################################################
@@ -42,7 +48,7 @@ class Welcome extends CI_Controller {
 				$this->logout();
 			}
 		}
-		$data['title']= "connexion";
+		$data['title']= "Login";
 		$this->load->view('_inc/header',$data);
 		$this->load->view('login');
 		$this->load->view('_inc/footer');
@@ -68,7 +74,7 @@ class Welcome extends CI_Controller {
 		$this->_rules();
         if ($this->form_validation->run() == FALSE) {
             $this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Remplissez les champs obligatoires</p>');
-			redirect('welcome/C_sign_up_redirect');
+			redirect('welcome/V_Sign_up');
 		} 
 		else {
 
@@ -132,7 +138,7 @@ class Welcome extends CI_Controller {
 						}
 						catch (Exception $e){
 							$this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Create Record Failed >>'.$e.'</p>');
-							redirect('welcome/C_sign_up_redirect');
+							redirect('welcome/V_sign_up');
 						}
 							
 					}
