@@ -23,7 +23,10 @@ class Welcome extends CI_Controller {
 	#####################################################################
 	public function V_sign_up(){
 
+		$data['title']= "Sign up";
+		$this->load->view('_inc/header',$data);
 		$this->load->view('sign_up');
+		$this->load->view('_inc/footer');
 	}
 
 	#####################################################################
