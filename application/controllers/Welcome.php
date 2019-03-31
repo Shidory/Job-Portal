@@ -38,6 +38,11 @@ class Welcome extends CI_Controller {
 		$this->load->view('home_user');
 	}
 	#####################################################################
+	public function C_sign_up_redirect(){
+
+	}
+	
+	#####################################################################
 	public function C_sign_up(){
 
 		$this->_rules();
@@ -133,14 +138,30 @@ class Welcome extends CI_Controller {
 	#####################################################################
 
 	public function C_login_redirect(){
-		
+
+		if($this->session->user || $this->session->entreprise){
+			if($this->session->type == 'user'){
+				redirect('home_user');
+			}
+			else if($this->session->type == 'entreprise') {
+				redirect('home_entreprise');
+			}else{
+				$this->logout();
+			}
+		}
+		$data['title']= "connexion";
+		$this->load->view('_inc/header',$data);
+		$this->load->view('login');
+		$this->load->view('_inc/footer');
 	}
+
+	#####################################################################
 	public function C_login(){
 		
 		$this->_rules_login();
         if ($this->form_validation->run() == FALSE) {
             $this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Remplissez les champs obligatoires</p>');
-            redirect('welcome/V_login');
+            redirect('welcome/C_login_redirect');
 		}
 		else {
 			
@@ -151,7 +172,7 @@ class Welcome extends CI_Controller {
 			
 			if($typePers != NULL && $typeEnt != NULL){
 				$this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Veuillez Choisir un seul type</p>');
-                redirect('welcome/V_login');
+                redirect('welcome/C_login_redirect');
 			}
 
 			if ($typePers != NULL) {
@@ -170,10 +191,10 @@ class Welcome extends CI_Controller {
 						redirect('welcome/home_user');
 					}
 					$this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Email or Password Incorrect</p>');
-                	redirect('welcome/V_login');
+                	redirect('welcome/C_login_redirect');
 				}else{
 					$this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Email or Password Incorrect</p>');
-                	redirect('welcome/V_login');
+                	redirect('welcome/C_login_redirect');
 				}
 				
 			}else if($typeEnt != NULL) {
