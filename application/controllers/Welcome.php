@@ -40,6 +40,10 @@ class Welcome extends CI_Controller {
 	#####################################################################
 	public function C_sign_up_redirect(){
 
+		$data['title']= "inscription";
+		$this->load->view('_inc/header',$data);
+		$this->load->view('inscription');
+		$this->load->view('_inc/footer');
 	}
 	
 	#####################################################################
