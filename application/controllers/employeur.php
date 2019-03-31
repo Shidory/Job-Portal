@@ -9,5 +9,12 @@ class Employeur extends CI_Controller {
 
         parent::__construct();
     }
+
+    public function C_sign_up(){
+
+		
+		
+	}
+
 }		
 ?>
