@@ -40,9 +40,9 @@ class Welcome extends CI_Controller {
 	#####################################################################
 	public function C_sign_up_redirect(){
 
-		$data['title']= "inscription";
+		$data['title']= "Sign up";
 		$this->load->view('_inc/header',$data);
-		$this->load->view('inscription');
+		$this->load->view('sign_up');
 		$this->load->view('_inc/footer');
 	}
 	
@@ -52,7 +52,7 @@ class Welcome extends CI_Controller {
 		$this->_rules();
         if ($this->form_validation->run() == FALSE) {
             $this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Remplissez les champs obligatoires</p>');
-			redirect('welcome/sign_up');
+			redirect('welcome/C_sign_up_redirect');
 		} 
 		else {
 
@@ -112,27 +112,27 @@ class Welcome extends CI_Controller {
 
 							$this->DemandeurDAO->M_sign_up($data);
 							$this->session->set_flashdata('message', '<p style="color:green;"><i class="material-icons">check</i> Create Record Success</p>');
-							redirect('welcome/V_home');
+							redirect('welcome/C_login_redirect');
 						}
 						catch (Exception $e){
 							$this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Create Record Failed >>'.$e.'</p>');
-							redirect('welcome/V_sign_up');
+							redirect('welcome/C_sign_up_redirect');
 						}
 							
 					}
 					else{
 						$this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Password not much</p>');
-						redirect('welcome/V_sign_up');
+						redirect('welcome/C_sign_up_redirect');
 					}
 				}
 				else{
 					$this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Ce Pseudo est deja attribué</p>');
-					redirect('welcome/V_sign_up');
+					redirect('welcome/C_sign_up_redirect');
 				}
 			}
 			else{
 				$this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Cet Email existe deja</p>');
-				redirect('welcome/V_sign_up');
+				redirect('welcome/C_sign_up_redirect');
 			}
 				
 		}
