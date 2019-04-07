@@ -4,7 +4,7 @@
             <div class="card-content black-text">
                 <span class="card-title center blue-grey-text"><!--?php echo ucfirst($title);?--></span>
                 <div class="divider"></div>
-                <?= form_open('welcome/C_login','class =""'); ?>
+                <?= form_open('login','class =""'); ?>
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="material-icons prefix">mail_outline</i>
