@@ -15,7 +15,7 @@
 <div class="row">
     <nav class="blue-grey">
         <div class="nav-wrapper">
-            <a href="<?php echo site_url('accueil');?>" class="brand-logo"><i class="material-icons large left" id="title-icon">work</i> Job-Portal</a>
+            <a href="<?= site_url('welcome/V_sign_up');?>" class="brand-logo"><i class="material-icons large left" id="title-icon">work</i> Job-Portal</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <?php
                     
