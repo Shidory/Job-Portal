@@ -12,7 +12,6 @@
         </form>
     </div>
 </div>
-    <!-- <div class="divider"></div> -->
     <div class="row">
         <?php
             foreach ($demandeur_data as $demandeur)
