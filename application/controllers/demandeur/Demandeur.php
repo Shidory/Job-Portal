@@ -7,15 +7,95 @@ defined('BASEPATH') OR exit('No direct script access allowed');
         public function __construct(){
 
             parent::__construct();
+
+
+            if(!$this->session->user){
+                $this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Veuillez vous connecter</p>');
+                redirect('demandeur/Demandeur/V_login');
+            }
         }
 
         #####################################################################
+        public function _rules() {
+
+            $this->form_validation->set_rules('nomDemandeur', 'nomdemandeur', 'trim|required');
+            $this->form_validation->set_rules('prenomDemandeur', 'prenomdemandeur', 'trim|required');
+            $this->form_validation->set_rules('titre', 'titre', 'trim|required');
+            $this->form_validation->set_rules('adresseDemandeur', 'adressedemandeur', 'trim|required');
+            $this->form_validation->set_rules('emailDemandeur', 'emaildemandeur', 'trim|valid_email|required');
+            $this->form_validation->set_rules('telephoneDemandeur', 'telephonedemandeur', 'trim|required');
+            $this->form_validation->set_rules('genre', 'genre', 'trim|required');
+            $this->form_validation->set_rules('dateNaissance', 'datenaissance', 'trim|required');
+            $this->form_validation->set_rules('nationalite', 'nationalite', 'trim|required');
+            $this->form_validation->set_rules('etatCivil', 'etatcivil', 'trim|required');
+            $this->form_validation->set_rules('imageProfile', 'imageprofile', 'trim');
+            $this->form_validation->set_rules('pseudo', 'pseudo', 'trim');
+            $this->form_validation->set_rules('pwd', 'pwd', 'trim|required');
+            $this->form_validation->set_rules('pwdconf', 'pwdConfirmation', 'trim|required');
+            $this->form_validation->set_error_delimiters('<span class="text-danger" style="color:red;">', '</span>');
+        }
+
+        #####################################################################
+        public function V_login(){
+		
+            if($this->session->user || $this->session->entreprise){
+                if($this->session->type == 'user'){
+                    redirect('home_user');
+                }
+                else if($this->session->type == 'entreprise') {
+                    redirect('home_entreprise');
+                }else{
+                    $this->logout();
+                }
+            }
+            $data['title']= "Login";
+            $this->load->view('_inc/header',$data);
+            $this->load->view('login');
+            $this->load->view('_inc/footer');
+        }
+    
+        #################################################################
         public function V_sign_up(){
 
             $data['title']= "Sign up";
             $this->load->view('_inc/header',$data);
             $this->load->view('sign_up');
             $this->load->view('_inc/footer');
+        }
+
+        #################################################################
+        public function upload_image(){
+            if ($_FILES['imageProfile']['size'] <= 10240000){
+    
+                $url="/uploads/demandeur";
+                $image=basename($_FILES['imageProfile']['name']);
+                $image=str_replace(' ','|',$image);
+                $type=explode(".",$image);
+                $type=$type[count($type)-1];
+    
+                if(in_array($type,array('jpg','jpeg','png','JPG','JPEG','PNG')))
+                {
+                    $tmppath="uploads/demandeur/".$this->input->post('nomDemandeur',TRUE).".".$type;
+                    if(is_uploaded_file($_FILES["imageProfile"]["tmp_name"]))
+                    {
+                        move_uploaded_file($_FILES['imageProfile']['tmp_name'],$tmppath);
+                        return $tmppath;
+                    }
+                }
+                else{
+                    
+                    $error = '<p style="color:red;"><i class="material-icons">cancel</i> Format invalide, seul les formats: JPEG, PNG sont autorisés</p>';
+                    $this->session->set_flashdata('message', $error);
+                    echo('erreur');
+                    //redirect('welcome/V_sign_up'); 
+                }
+            }
+            else{
+                $error = '<p style="color:red;"><i class="material-icons">cancel</i> Taille invalide, importez un fichier de taille inférieur à 100ko</p>';
+                $this->session->set_flashdata('message', $error);
+                echo('erreur');
+                //redirect('welcome/V_sign_up');
+            }
         }
 
         #################################################################
@@ -34,7 +114,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
                 $pseudo = $this->input->post('pseudo',TRUE);
                 $verifEmail = $this->DemandeurDAO->get_by_email($email);
                 $verifPseudo = $this->DemandeurDAO->get_by_pseudo($pseudo);
-                var_dump('$this->input->post('pwd')');die();
+                var_dump($this->input->post('pwd'));die();
                 if(empty($verifEmail)){
 
                     if(empty($verifPseudo)){
