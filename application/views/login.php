@@ -1,28 +1,3 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="<?= site_url(); ?>assets/materialise.css">
-    <link rel="stylesheet" href="<?= base_url(); ?>assets/font.css">
-    <script src="<?= base_url(); ?>assets/materialize.js"></script>
-    <link rel="stylesheet" href="<?= base_url(); ?>assets/style.css">
-    <title>Job Portal</title>
-</head>
-<body>
-<div class="row">
-    <nav class="blue-grey">
-        <div class="nav-wrapper">
-            <a href="#" class="brand-logo"><i class="material-icons large left" id="title-icon">work</i> Job-Portal</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li class="active"><a href="#"><i class="material-icons large left" id="">home</i></a></li>
-                <li><a href="<?= base_url(); ?>welcome/V_login">Login</a></li>
-                <li><a href="<?= base_url(); ?>welcome/V_sign_up">Sign up</a></li>
-            </ul>
-        </div>
-    </nav>
-</div>
-
 <div class="row">
     <div class="col s12 m6 offset-m3">
         <div class="card">
@@ -71,5 +46,3 @@
         </div>
     </div>
 </div>
-</body>
-</html>
