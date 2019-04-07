@@ -67,7 +67,7 @@ class Welcome extends CI_Controller {
 	}
 
 	#####################################################################
-	public function C_login(){
+	public function login_controller(){
 		
 		$this->_rules_login();
         if ($this->form_validation->run() == FALSE) {
