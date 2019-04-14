@@ -36,6 +36,7 @@ class Welcome extends CI_Controller {
 		$data['title'] = "Login";
 		$this->load->view('_inc/header',$data);
 		$this->load->view('login');
+		$this->load->view('_inc/footer');
 	}
 	#####################################################################
 	public function C_sign_up_redirect(){
