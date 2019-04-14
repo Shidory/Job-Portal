@@ -48,24 +48,6 @@ class Welcome extends CI_Controller {
 
 	#####################################################################
 
-	public function C_login_redirect(){
-
-		if($this->session->user || $this->session->entreprise){
-			if($this->session->type == 'user'){
-				redirect('home_user');
-			}
-			else if($this->session->type == 'entreprise') {
-				redirect('home_entreprise');
-			}else{
-				$this->logout();
-			}
-		}
-		$data['title']= "connexion";
-		$this->load->view('_inc/header',$data);
-		$this->load->view('login');
-		$this->load->view('_inc/footer');
-	}
-
 	#####################################################################
 	public function login_controller(){
 		
