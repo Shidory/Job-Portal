@@ -11,11 +11,6 @@ class Welcome extends CI_Controller {
 
 		$this->load->model('DemandeurDAO');
 		
-		//verifying session
-		if(!$this->session->entreprise){
-			$this->session->set_flashdata('message', '<p style="color:red;"><i class="material-icons">cancel</i> Veuillez vous connecter</p>');
-			redirect('welcome/V_login');
-		}
 		
 	}
 
