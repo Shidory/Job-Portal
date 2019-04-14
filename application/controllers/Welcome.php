@@ -55,17 +55,6 @@ class Welcome extends CI_Controller {
 
 	}
 
-	
-	public function _rules_login(){
-
-		$this->form_validation->set_rules('email', 'Email obligatoire', 'trim|required');
-		$this->form_validation->set_rules('pwd', 'Password Obligatoire', 'trim|required');
-		$this->form_validation->set_rules('typePers', 'Type Obligatoire', 'trim');
-		$this->form_validation->set_rules('typeEnt', 'Type Obligatoire', 'trim');
-
-        $this->form_validation->set_error_delimiters('<span class="white-text center red" style="color:red;">', '</span>');
-	}
-
 	#####################################################################
 
 }
