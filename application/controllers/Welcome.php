@@ -33,7 +33,7 @@ class Welcome extends CI_Controller {
 	#####################################################################
 	public function login(){
 
-
+		$data['title'] = "Login";
 	}
 	#####################################################################
 	public function C_sign_up_redirect(){
