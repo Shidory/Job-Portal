@@ -17,8 +17,9 @@ class Welcome extends CI_Controller {
 	#####################################################################
 	public function index()
 	{
-		$this->login_controller();
+		$this->login();
 	}
+
 	#####################################################################
 	#							LOAD VIEWS								#
 	#####################################################################
@@ -27,6 +28,12 @@ class Welcome extends CI_Controller {
 	public function V_home_user(){
 
 		$this->load->view('home_user');
+	}
+
+	#####################################################################
+	public function longin(){
+
+		
 	}
 	#####################################################################
 	public function C_sign_up_redirect(){
