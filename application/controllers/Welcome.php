@@ -31,9 +31,9 @@ class Welcome extends CI_Controller {
 	}
 
 	#####################################################################
-	public function longin(){
+	public function login(){
 
-		
+
 	}
 	#####################################################################
 	public function C_sign_up_redirect(){
